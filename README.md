@@ -1,4 +1,4 @@
-# assistant-jarvispluginManagement {
+
     repositories {
         google()
         mavenCentral()
