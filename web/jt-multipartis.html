@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cinéma Studio — JT Multi-Partis</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+--bg:#0a0a12;--bg2:#12121c;--bg3:#1a1a28;
+--panel:#16161f;--border:#2a2a3a;
+--ink:#e8e6e0;--dim:#8a8896;--faint:#4a4858;
+--acc:#e5c15a;--acc2:#e87b35;
+--ok:#4a9d6a;--err:#c85a4a;--warn:#d4a017;
+--lfi:#cc2444;--rn:#1b3a75;--ren:#ff8a00;--ps:#e75480;--eelv:#3aaa35;--lr:#0066cc;
+--r:6px;--fs:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+--fm:ui-monospace,'SF Mono',Menlo,monospace;
+}
+html,body{background:var(--bg)}
+body{font-family:var(--fs);background:var(--bg);color:var(--ink);min-height:100vh;padding:1.5rem 1rem 24rem;font-size:15px;line-height:1.55;max-width:1100px;margin:0 auto}
+header{margin-bottom:1.2rem;text-align:center;padding:1rem 0 1.4rem;position:relative}
+header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:220px;height:1px;background:linear-gradient(90deg,transparent,var(--acc),transparent);opacity:.5}
+h1{font-size:1.9rem;font-weight:300;margin-bottom:.4rem;background:linear-gradient(135deg,var(--acc2),var(--acc));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{font-size:.85rem;color:var(--dim);font-style:italic}
+.toast{position:fixed;top:1.5rem;left:50%;transform:translateX(-50%) translateY(-120px);background:var(--bg3);color:var(--ink);border:1px solid var(--border);border-left:3px solid var(--acc);padding:.85rem 1.4rem;border-radius:var(--r);font-size:.85rem;box-shadow:0 8px 32px rgba(0,0,0,.6);z-index:1000;opacity:0;transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .35s;max-width:90vw;text-align:center;display:flex;align-items:center;gap:.6rem}
+.toast.visible{transform:translateX(-50%) translateY(0);opacity:1}
+.toast.success{border-left-color:var(--ok)}.toast.error{border-left-color:var(--err)}.toast.warn{border-left-color:var(--warn)}
+.banner{background:var(--panel);border:1px solid var(--border);border-left:2px solid var(--acc);padding:1rem 1.15rem;border-radius:var(--r);font-size:.8rem;color:var(--dim);margin-bottom:1.2rem;line-height:1.6}
+.banner strong{color:var(--ink)}.banner .hl{color:var(--acc)}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.3rem;margin-bottom:1rem}
+.panel.ok{box-shadow:inset 3px 0 0 var(--ok)}
+input[type=password],input[type=text],textarea{width:100%;padding:.85rem 1rem;border-radius:var(--r);border:1px solid var(--border);background:var(--bg2);color:var(--ink);font-family:var(--fm);font-size:.78rem;margin-bottom:.6rem}
+textarea{resize:vertical;min-height:76px;line-height:1.5}
+input:focus,textarea:focus{outline:none;border-color:var(--acc)}
+.btn{width:100%;padding:.85rem 1.2rem;border-radius:var(--r);border:1px solid var(--border);background:var(--bg2);color:var(--ink);font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-bottom:.7rem;transition:all .2s;font-family:inherit}
+.btn:hover:not(:disabled){background:var(--bg3);border-color:var(--acc)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.btn-primary{border-color:var(--acc);background:linear-gradient(135deg,rgba(232,123,53,.2),rgba(229,193,90,.15));color:var(--acc);font-size:1.15rem;padding:1.5rem;letter-spacing:.25em}
+.btn-primary:disabled{opacity:.5}
+.btn-stop{border-color:var(--err);color:var(--err);background:transparent;display:none}
+.btn-stop.visible{display:block}
+.status{font-size:.75rem;padding:.6rem .9rem;border-radius:var(--r);margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem;background:var(--bg2);color:var(--dim);border:1px solid var(--border)}
+.status.ok{background:rgba(74,157,106,.08);color:var(--ok);border-color:rgba(74,157,106,.3)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--faint);flex-shrink:0}
+.status.ok .dot{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.hint{font-size:.72rem;color:var(--dim);margin-top:.5rem}
+.hint a{color:var(--acc);text-decoration:none}
+.keys-list{margin-top:.7rem}
+.key-row{padding:.4rem .7rem;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:.35rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.72rem}
+.key-row .key-id{color:var(--acc);font-weight:600;letter-spacing:.03em}
+.key-row .key-state{font-size:.62rem;padding:.15rem .5rem;border-radius:2px;background:rgba(74,157,106,.15);color:var(--ok);border:1px solid rgba(74,157,106,.3);letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.key-row .key-state.cool{background:rgba(212,160,23,.15);color:var(--warn);border-color:rgba(212,160,23,.3)}
+.key-row .key-state.dead{background:rgba(200,90,74,.15);color:var(--err);border-color:rgba(200,90,74,.3)}
+.section{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);margin-bottom:1rem;overflow:hidden}
+.section.hidden{display:none!important}
+.section-header{padding:1rem 1.2rem;cursor:pointer;user-select:none;display:flex;justify-content:space-between;align-items:center}
+.section-title{font-size:.85rem;text-transform:uppercase;letter-spacing:.2em;color:var(--ink);font-weight:500;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.badge{display:inline-block;padding:.15rem .55rem;background:transparent;color:var(--acc);border:1px solid var(--border);border-radius:2px;font-size:.6rem;letter-spacing:.15em;font-weight:600}
+.chevron{font-size:.7rem;color:var(--faint);transition:transform .3s}
+.section.open .chevron{transform:rotate(180deg);color:var(--acc)}
+.section-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.section.open .section-body{max-height:20000px}
+.section-content{padding:0 1.2rem 1.2rem}
+.launcher{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem;margin-bottom:1rem}
+.launcher-row{display:flex;gap:.7rem;flex-wrap:wrap}
+.launcher-row .btn{margin-bottom:0;flex:1;min-width:180px}
+.parties-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.6rem;margin-top:.8rem}
+.party-card{padding:.7rem .8rem;border-radius:var(--r);border:1px solid var(--border);background:var(--bg2);text-align:center;transition:all .2s;cursor:pointer;user-select:none}
+.party-card.selected{border-color:var(--acc);background:rgba(229,193,90,.06)}
+.party-card:not(.selected){opacity:.45}
+.party-card .pc-name{font-size:.82rem;font-weight:600;margin-bottom:.2rem}
+.party-card .pc-tag{font-size:.68rem;color:var(--dim);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase}
+.party-card .pc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.4rem;vertical-align:middle}
+.news-list{max-height:280px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r);background:var(--bg2);margin-top:.6rem}
+.news-item{padding:.7rem .9rem;border-bottom:1px solid var(--border);font-size:.8rem;display:flex;gap:.6rem;align-items:flex-start}
+.news-item:last-child{border-bottom:none}
+.news-item .news-party{font-family:var(--fm);font-size:.62rem;color:var(--acc);font-weight:700;flex-shrink:0;min-width:38px;text-transform:uppercase}
+.news-item .news-title{color:var(--ink);line-height:1.4;font-size:.8rem}
+.news-item .news-title a{color:inherit;text-decoration:none}
+.news-item .news-source{font-size:.65rem;color:var(--faint);margin-top:.2rem}
+.script-view{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.2rem;margin-top:.6rem;font-size:.86rem;line-height:1.7;color:var(--ink);max-height:520px;overflow-y:auto}
+.script-title{font-size:1.05rem;font-weight:500;color:var(--acc);margin-bottom:.35rem}
+.script-logline{font-style:italic;color:var(--dim);margin-bottom:1rem;font-size:.82rem}
+.script-meta{font-size:.72rem;color:var(--faint);font-family:var(--fm);margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px dashed var(--border)}
+.script-scene{margin-bottom:1.1rem;padding-left:.9rem;border-left:2px solid var(--border)}
+.script-scene .sc-head{font-size:.78rem;color:var(--acc);font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.35rem}
+.script-scene .sc-line{margin-bottom:.25rem;font-size:.83rem}
+.script-scene .sc-label{display:inline-block;min-width:78px;color:var(--faint);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}
+.script-scene .sc-dialogue{color:#f0d78a;font-style:italic}
+.script-scene .sc-overlay{color:#e8a87c;font-family:var(--fm);font-size:.78rem}
+.script-scene .sc-character{color:#b8d8e8}
+.script-scene .sc-shots{margin-top:.4rem;padding:.4rem .6rem;background:rgba(255,255,255,.02);border-radius:3px;font-size:.76rem;color:var(--dim);font-family:var(--fm)}
+.script-scene .sc-party{padding:.2rem .5rem;display:inline-block;border-radius:2px;font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;color:#fff}
+.videos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:.8rem}
+.scene-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .3s;display:flex;flex-direction:column}
+.scene-card.generating{border-color:var(--acc)}
+.scene-card.done{border-color:var(--ok)}
+.scene-card.error{border-color:var(--err)}
+.scene-card-header{padding:.55rem .75rem;font-size:.7rem;font-family:var(--fm);color:var(--dim);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);gap:.5rem}
+.scene-card-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.scene-card-body{padding:.7rem}
+.scene-card-body video{width:100%;border-radius:2px;background:#000;display:block}
+.scene-placeholder{width:100%;aspect-ratio:16/9;background:#0a0a12;border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:.7rem;font-family:var(--fm);flex-direction:column;gap:.5rem;text-align:center;padding:.5rem}
+.scene-download{display:block;margin-top:.5rem;font-size:.72rem;color:var(--acc);text-decoration:none;text-align:center;padding:.4rem;border:1px solid var(--border);border-radius:3px;transition:all .2s;background:transparent;width:100%;cursor:pointer;font-family:inherit}
+.scene-download:hover{background:rgba(229,193,90,.08);border-color:var(--acc)}
+.spinner-mini{width:14px;height:14px;border:2px solid rgba(229,193,90,.2);border-top-color:var(--acc);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.player-overlay{position:fixed;inset:0;background:#000;z-index:2000;display:none;align-items:center;justify-content:center;cursor:pointer}
+.player-overlay.visible{display:flex}
+#player-canvas{display:block;max-width:100vw;max-height:100vh;background:#000}
+.player-hint{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.55);font-size:.75rem;font-family:var(--fm);letter-spacing:.15em;text-transform:uppercase;pointer-events:none;opacity:1;transition:opacity .5s;text-align:center;background:rgba(0,0,0,.4);padding:.35rem .8rem;border-radius:3px}
+.player-hint.hidden{opacity:0}
+.player-controls{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.1rem;margin-top:.6rem}
+.player-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.6rem}
+.player-row .btn{margin-bottom:0;flex:1;min-width:140px}
+.status-bar{position:fixed;bottom:230px;left:0;right:0;background:var(--bg3);border-top:1px solid var(--border);color:var(--ink);padding:.75rem 1.1rem;font-size:.78rem;display:flex;align-items:center;gap:.7rem;transform:translateY(200%);transition:transform .35s cubic-bezier(.2,.9,.3,1);z-index:150;font-family:var(--fm);box-shadow:0 -4px 20px rgba(0,0,0,.4)}
+.status-bar.visible{transform:translateY(0)}
+.spinner{width:12px;height:12px;border:2px solid rgba(229,193,90,.2);border-top-color:var(--acc);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+.debug-panel{position:fixed;bottom:0;left:0;right:0;height:220px;background:#05050a;border-top:2px solid var(--acc);z-index:200;display:flex;flex-direction:column;font-family:var(--fm);box-shadow:0 -8px 32px rgba(0,0,0,.7);transition:height .3s ease}
+.debug-panel.collapsed{height:40px}
+.debug-header{display:flex;justify-content:space-between;align-items:center;padding:.4rem .7rem;background:linear-gradient(90deg,#0f0f18,#1a1a28);border-bottom:1px solid var(--border);flex-shrink:0;user-select:none}
+.debug-tabs{display:flex;gap:.25rem}
+.debug-tab{background:transparent;border:1px solid var(--border);color:var(--dim);font-size:.68rem;padding:.35rem .7rem;border-radius:3px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;font-family:inherit}
+.debug-tab.active{color:var(--acc);border-color:var(--acc);background:rgba(229,193,90,.08)}
+.debug-actions{display:flex;gap:.3rem}
+.debug-actions button{background:transparent;border:1px solid var(--border);color:var(--dim);font-size:.62rem;padding:.28rem .55rem;border-radius:2px;cursor:pointer;font-family:inherit}
+.debug-actions button:hover{color:var(--acc);border-color:var(--acc)}
+.debug-body{flex:1;overflow-y:auto;padding:.6rem .8rem 1rem;font-size:.72rem;line-height:1.5;color:#c8c8d0}
+.debug-body.hidden{display:none}
+.journal-body{font-size:.78rem;line-height:1.55}
+.journal-body .j-entry{display:flex;gap:.6rem;padding:.25rem 0;align-items:flex-start;border-bottom:1px dashed rgba(255,255,255,.04)}
+.journal-body .j-entry:last-child{border-bottom:none}
+.journal-body .j-time{font-family:var(--fm);font-size:.7rem;color:var(--faint);flex-shrink:0;min-width:64px;padding-top:.15rem}
+.journal-body .j-icon{flex-shrink:0}
+.journal-body .j-msg{color:#d8d8e0;flex:1;word-break:break-word}
+.journal-body .j-entry.highlight .j-msg{color:var(--acc);font-weight:600}
+.journal-body .j-entry.success .j-msg{color:var(--ok)}
+.journal-body .j-entry.warn .j-msg{color:var(--warn)}
+.journal-body .j-entry.error .j-msg{color:var(--err)}
+.debug-entry{margin-bottom:.3rem;padding:.25rem .4rem;border-left:2px solid transparent;border-radius:2px;word-break:break-word}
+.debug-entry.info{border-left-color:var(--faint)}
+.debug-entry.success{border-left-color:var(--ok);background:rgba(74,157,106,.04)}
+.debug-entry.warn{border-left-color:var(--warn);background:rgba(212,160,23,.04)}
+.debug-entry.error{border-left-color:var(--err);background:rgba(200,90,74,.06);color:#f0a0a0}
+.debug-entry.api{border-left-color:var(--acc)}
+.debug-entry.response{border-left-color:var(--acc2)}
+.debug-time{color:var(--faint);margin-right:.5rem;font-size:.65rem}
+.debug-cat{color:var(--acc);font-weight:600;margin-right:.4rem;font-size:.65rem}
+.debug-msg{color:#d8d8e0}
+.debug-data{margin-top:.3rem;padding:.4rem .5rem;background:#0a0a12;border:1px solid var(--border);border-radius:2px;font-size:.68rem;color:#a8d8b0;max-height:160px;overflow:auto;white-space:pre-wrap;word-break:break-all;line-height:1.4}
+.hidden{display:none!important}
+.voice-toggle{display:flex;align-items:center;gap:.5rem;margin-top:.6rem;font-size:.75rem;color:var(--dim)}
+.voice-toggle input{width:auto;margin:0;accent-color:var(--acc)}
+@media(max-width:480px){h1{font-size:1.55rem}.videos-grid{grid-template-columns:1fr}body{padding-bottom:26rem}.debug-panel{height:200px}.status-bar{bottom:210px}.parties-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Cinéma Studio — JT Multi-Partis</h1>
+<p class="subtitle">6 partis · 6 reporters chatons distincts · 1 présentateur plateau · style Wes Anderson</p>
+</header>
+
+<div class="banner">
+<strong>Le JT Multi-Partis.</strong> L'IA récupère les <span class="hl">actualités des 6 grands partis français</span> (LFI, RN, Renaissance, PS, Les Écologistes, LR), sélectionne <span class="hl">1 sujet fort par parti</span>, écrit un scénario avec <span class="hl">1 présentateur chaton unique</span> et <span class="hl">1 reporter chaton distinct par parti</span> (couleurs et casques aux couleurs du parti), puis génère <span class="hl">1 ouverture plateau + 1 séquence par parti, en parallèle</span> dans un style Wes Anderson strict (symétrie, montage multi-plans, 35 mm, chatons casqués en habits Shaolin).
+</div>
+
+<div class="panel" id="api-panel">
+<label class="label" style="display:block;font-size:.72rem;color:var(--dim);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.15em;font-weight:600;">Clés API Agnes — une par ligne (chaque clé multiplie le débit)</label>
+<textarea id="api-keys-input" placeholder="sk-xxxxxxxxxxxxxxxxxxxxxxxx&#10;sk-yyyyyyyyyyyyyyyyyyyyyyyy" rows="3" spellcheck="false" autocomplete="off"></textarea>
+<button type="button" class="btn" id="api-save-btn">Enregistrer les clés</button>
+<div class="status" id="api-status-line"><span class="dot"></span><span id="api-status-text">Aucune clé API enregistrée</span></div>
+<div class="keys-list" id="api-keys-status"></div>
+<div class="hint">Clés gratuites sur <a href="https://platform.agnes-ai.com" target="_blank" rel="noopener">platform.agnes-ai.com</a> → Settings → API Keys · N clés = N vidéos générées en parallèle · Les clés restent dans ce navigateur (localStorage).</div>
+</div>
+
+<div class="panel" id="parties-panel">
+<label class="label" style="display:block;font-size:.72rem;color:var(--dim);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.15em;font-weight:600;">Partis inclus dans le JT (cochez/décochez)</label>
+<div class="parties-grid" id="parties-grid"></div>
+</div>
+
+<div class="launcher">
+<div class="launcher-row">
+<button type="button" class="btn btn-primary" id="launch-btn">▶ Lancer le JT Multi-Partis</button>
+<button type="button" class="btn btn-stop" id="stop-btn">⏹ Arrêter</button>
+</div>
+</div>
+
+<div class="section hidden" id="section-news">
+<div class="section-header" data-toggle="section-news">
+<span class="section-title">📰 Actualités retenues <span class="badge" id="news-badge">—</span></span>
+<span class="chevron">▼</span>
+</div>
+<div class="section-body"><div class="section-content">
+<div class="news-list" id="news-view"></div>
+</div></div>
+</div>
+
+<div class="section hidden" id="section-script">
+<div class="section-header" data-toggle="section-script">
+<span class="section-title">📜 Scénario du JT <span class="badge" id="script-badge">—</span></span>
+<span class="chevron">▼</span>
+</div>
+<div class="section-body"><div class="section-content">
+<div class="script-view" id="script-view">Le scénario apparaîtra ici…</div>
+</div></div>
+</div>
+
+<div class="section hidden" id="section-videos">
+<div class="section-header" data-toggle="section-videos">
+<span class="section-title">🎞️ Séquences vidéo <span class="badge" id="videos-count">0</span></span>
+<span class="chevron">▼</span>
+</div>
+<div class="section-body"><div class="section-content">
+<div class="videos-grid" id="videos-grid"></div>
+</div></div>
+</div>
+
+<div class="section hidden" id="section-player">
+<div class="section-header" data-toggle="section-player">
+<span class="section-title">▶ Diffusion du JT <span class="badge" id="player-badge">0</span></span>
+<span class="chevron">▼</span>
+</div>
+<div class="section-body"><div class="section-content">
+<div class="player-controls">
+<div class="player-row">
+<button type="button" class="btn" id="play-film-btn" disabled>▶ Diffuser le JT</button>
+<button type="button" class="btn" id="replay-btn" disabled>🔁 Rejouer</button>
+</div>
+<div class="voice-toggle">
+<input type="checkbox" id="voice-toggle" checked>
+<label for="voice-toggle">Narration vocale française (voix du navigateur)</label>
+</div>
+</div>
+<div class="hint">Lecture séquentielle avec incrustations françaises et voix off. Échap ou clic pour quitter.</div>
+</div></div>
+</div>
+
+<div class="status-bar" id="status-bar"><div class="spinner"></div><span id="status-text">Préparation…</span></div>
+<div class="toast" id="toast"><span id="toast-icon">✓</span><span id="toast-text">Message</span></div>
+
+<div class="debug-panel" id="debug-panel">
+<div class="debug-header" id="debug-header">
+<div class="debug-tabs">
+<button type="button" class="debug-tab active" data-tab="journal" id="tab-journal">📻 Journal</button>
+<button type="button" class="debug-tab" data-tab="tech" id="tab-tech">🖥️ Technique</button>
+</div>
+<div class="debug-actions">
+<button type="button" id="debug-copy-btn">Copier</button>
+<button type="button" id="debug-clear-btn">Effacer</button>
+<button type="button" id="debug-collapse-btn">−</button>
+</div>
+</div>
+<div class="debug-body journal-body" id="journal-body"></div>
+<div class="debug-body hidden" id="tech-body"></div>
+</div>
+
+<div class="player-overlay" id="player-overlay">
+<canvas id="player-canvas"></canvas>
+<div class="player-hint" id="player-hint-overlay">Échap ou clic pour quitter</div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════════
+// CONFIGURATION
+// ══════════════════════════════════════════════════════════════════
+const API_BASE = 'https://apihub.agnes-ai.com/v1';
+const POLL_BASE = 'https://apihub.agnes-ai.com/agnesapi';
+const MODEL_TEXT = 'agnes-2.5-flash';
+// agnes-video-v2.0 a été retiré le 25/09/2026 : la série 2.5 le remplace.
+// Flash : 720P uniquement, durée "4" à "12" secondes, statut via /agnesapi.
+const MODEL_VIDEO = 'agnes-video-2.5-flash';
+const VIDEO_SECONDS = '6';
+const VIDEO_ASPECT = '16:9';
+
+const VIDEO_FIRST_POLL_DELAY_SEC = 20;
+const VIDEO_POLL_INTERVALS = [4, 4, 6, 6, 8, 8, 10];
+const VIDEO_MAX_POLL_ATTEMPTS = 150;
+const KEY_COOLDOWN_MS = 60000;
+
+const API_KEYS_STORAGE = 'cinema_multipartis_keys_v1';
+const PARTIES_STORAGE = 'cinema_multipartis_parties_v1';
+const DEBUG_MAX = 800;
+const NEWS_PER_PARTY = 5;
+
+// Les flux Google News ne renvoient pas d'en-têtes CORS : on tente en direct,
+// puis via des relais publics. Si tous échouent, le parti est ignoré.
+const CORS_PROXIES = [
+  u => u,
+  u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+  u => 'https://corsproxy.io/?url=' + encodeURIComponent(u),
+  u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u)
+];
+
+// ══════════════════════════════════════════════════════════════════
+// CATALOGUE DES 6 PARTIS
+// ══════════════════════════════════════════════════════════════════
+const PARTIES_CATALOG = [
+  {
+    id:'lfi', name:'La France insoumise', tag:'LFI',
+    color:'#cc2444',
+    rss:'https://news.google.com/rss/search?q=%22La+France+insoumise%22&hl=fr&gl=FR&ceid=FR:fr',
+    keywords:/insoumise|insoumis|LFI|Mélenchon|Panot|Coquerel|Bompard|Boyard|Guiraud|Guetté/i,
+    chatBreed:'siamois', breedEn:'Siamese',
+    helmet:'casque de moto rétro rouge carmin à visière fumée',
+    outfit:'kimono de Shaolin rouge carmin à liseré doré, ceinture crème',
+    brandColorEn:'bright crimson red'
+  },
+  {
+    id:'rn', name:'Rassemblement National', tag:'RN',
+    color:'#1b3a75',
+    rss:'https://news.google.com/rss/search?q=%22Rassemblement+National%22&hl=fr&gl=FR&ceid=FR:fr',
+    keywords:/rassemblement national|\bRN\b|Le Pen|Bardella|Chenu|Maréchal/i,
+    chatBreed:'chartreux', breedEn:'Chartreux',
+    helmet:'casque de moto rétro bleu marine profond à bande tricolore',
+    outfit:'kimono de Shaolin bleu marine à galon doré, ceinture blanche',
+    brandColorEn:'deep navy blue'
+  },
+  {
+    id:'ren', name:'Renaissance', tag:'REN',
+    color:'#ff8a00',
+    rss:'https://news.google.com/rss/search?q=Renaissance+Macron&hl=fr&gl=FR&ceid=FR:fr',
+    keywords:/renaissance|macron|attal|borne|darmanin/i,
+    chatBreed:'maine coon', breedEn:'Maine Coon',
+    helmet:'casque de moto rétro orange mandarine à visière bleue',
+    outfit:'kimono de Shaolin orange mandarine à liseré bleu, ceinture blanche',
+    brandColorEn:'bright tangerine orange'
+  },
+  {
+    id:'ps', name:'Parti Socialiste', tag:'PS',
+    color:'#e75480',
+    rss:'https://news.google.com/rss/search?q=%22Parti+Socialiste%22&hl=fr&gl=FR&ceid=FR:fr',
+    keywords:/parti socialiste|\bPS\b|socialiste|Faure|Vallaud|Hidalgo|Mayer-Rossignol/i,
+    chatBreed:'persan', breedEn:'Persian',
+    helmet:'casque de moto rétro rose fuchsia à fleurs pastel',
+    outfit:'kimono de Shaolin rose fuchsia à liseré lavande, ceinture crème',
+    brandColorEn:'rose pink'
+  },
+  {
+    id:'eelv', name:'Les Écologistes (ex-EELV)', tag:'EELV',
+    color:'#3aaa35',
+    rss:'https://news.google.com/rss/search?q=%22Les+%C3%89cologistes%22+OR+EELV+OR+Tondelier&hl=fr&gl=FR&ceid=FR:fr',
+    keywords:/écologistes|europe écologie|écolos?|EELV|Tondelier|Rousseau|Jadot/i,
+    chatBreed:'angora', breedEn:'white Turkish Angora',
+    helmet:'casque de moto rétro vert jade à motif feuille',
+    outfit:'kimono de Shaolin vert jade à liseré jaune citron, ceinture crème',
+    brandColorEn:'jade green'
+  },
+  {
+    id:'lr', name:'Les Républicains', tag:'LR',
+    color:'#0066cc',
+    rss:'https://news.google.com/rss/search?q=%22Les+Republicains%22&hl=fr&gl=FR&ceid=FR:fr',
+    keywords:/républicains|\bLR\b|Retailleau|Wauquiez|Bertrand|Pécresse/i,
+    chatBreed:'norvégien', breedEn:'Norwegian Forest',
+    helmet:'casque de moto rétro bleu roi à liseré blanc',
+    outfit:'kimono de Shaolin bleu roi à liseré blanc, ceinture rouge',
+    brandColorEn:'royal blue'
+  }
+];
+
+const ANCHOR = {
+  name:'Maître Moustache',
+  breedEn:'fluffy ginger tabby',
+  desc:'chaton roux tigré, casque de moto rétro crème et doré, kimono de Shaolin crème à col moutarde',
+  descEn:'a fluffy ginger tabby kitten news anchor wearing a cream-and-gold retro motorcycle helmet with the visor up and a cream Shaolin kung-fu robe with a mustard collar'
+};
+
+const STYLE_LOCK = 'Wes Anderson film style: perfectly symmetrical centered composition, flat pastel color palette, '
+  + 'meticulous dollhouse-like set design, 35mm film grain, soft even lighting, planimetric framing, '
+  + 'whimsical deadpan tone. All characters are small anthropomorphic kittens. No real humans, no text, no logos.';
+
+// ══════════════════════════════════════════════════════════════════
+// ÉTAT
+// ══════════════════════════════════════════════════════════════════
+const state = {
+  keys: [],              // {key, state:'ok'|'cool'|'dead', coolUntil, busy}
+  selected: new Set(PARTIES_CATALOG.map(p => p.id)),
+  running: false,
+  abort: null,
+  news: {},              // partyId -> [{title, source, link, date}]
+  script: null,
+  scenes: [],            // {id, kind:'anchor'|'party', party, seg, prompt, status, url, error}
+  keyWaiters: []
+};
+
+const $ = id => document.getElementById(id);
+const sleep = (ms, signal) => new Promise((res, rej) => {
+  const t = setTimeout(res, ms);
+  if (signal) signal.addEventListener('abort', () => { clearTimeout(t); rej(new DOMException('Arrêt', 'AbortError')); }, { once: true });
+});
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+const partyById = id => PARTIES_CATALOG.find(p => p.id === id);
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+};
+
+// ══════════════════════════════════════════════════════════════════
+// JOURNAL / DEBUG / UI
+// ══════════════════════════════════════════════════════════════════
+const nowTime = () => new Date().toLocaleTimeString('fr-FR', { hour12: false });
+
+function journal(msg, type = '', icon = '•') {
+  const body = $('journal-body');
+  const el = document.createElement('div');
+  el.className = 'j-entry ' + type;
+  el.innerHTML = `<span class="j-time">${nowTime()}</span><span class="j-icon">${icon}</span><span class="j-msg">${esc(msg)}</span>`;
+  body.appendChild(el);
+  while (body.children.length > DEBUG_MAX) body.firstChild.remove();
+  body.scrollTop = body.scrollHeight;
+}
+
+function debug(cat, msg, type = 'info', data) {
+  const body = $('tech-body');
+  const el = document.createElement('div');
+  el.className = 'debug-entry ' + type;
+  let html = `<span class="debug-time">${nowTime()}</span><span class="debug-cat">${esc(cat)}</span><span class="debug-msg">${esc(msg)}</span>`;
+  if (data !== undefined) {
+    let txt = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+    if (txt.length > 4000) txt = txt.slice(0, 4000) + '\n…(tronqué)';
+    html += `<div class="debug-data">${esc(txt)}</div>`;
+  }
+  el.innerHTML = html;
+  body.appendChild(el);
+  while (body.children.length > DEBUG_MAX) body.firstChild.remove();
+  body.scrollTop = body.scrollHeight;
+}
+
+let toastTimer = null;
+function toast(msg, type = 'success') {
+  const icons = { success:'✓', error:'✕', warn:'⚠', info:'ℹ' };
+  $('toast').className = 'toast visible ' + type;
+  $('toast-icon').textContent = icons[type] || '✓';
+  $('toast-text').textContent = msg;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => $('toast').classList.remove('visible'), 3800);
+}
+
+function setStatus(msg) {
+  if (msg) { $('status-text').textContent = msg; $('status-bar').classList.add('visible'); }
+  else $('status-bar').classList.remove('visible');
+}
+
+function showSection(id, open = true) {
+  const s = $(id);
+  s.classList.remove('hidden');
+  if (open) s.classList.add('open');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// CLÉS API (pool avec refroidissement)
+// ══════════════════════════════════════════════════════════════════
+const maskKey = k => k.length > 12 ? k.slice(0, 6) + '…' + k.slice(-4) : '••••';
+
+function loadKeys() {
+  const raw = store.get(API_KEYS_STORAGE);
+  const list = raw ? raw.split('\n').map(s => s.trim()).filter(Boolean) : [];
+  state.keys = list.map(key => ({ key, state:'ok', coolUntil:0, busy:0 }));
+  $('api-keys-input').value = list.join('\n');
+  renderKeys();
+}
+
+function saveKeys() {
+  const list = [...new Set($('api-keys-input').value.split(/[\n,;\s]+/).map(s => s.trim()).filter(Boolean))];
+  store.set(API_KEYS_STORAGE, list.join('\n'));
+  state.keys = list.map(key => ({ key, state:'ok', coolUntil:0, busy:0 }));
+  $('api-keys-input').value = list.join('\n');
+  renderKeys();
+  if (list.length) { toast(`${list.length} clé(s) enregistrée(s)`); journal(`${list.length} clé(s) API enregistrée(s)`, 'success', '🔑'); }
+  else toast('Aucune clé saisie', 'warn');
+}
+
+function renderKeys() {
+  const live = state.keys.filter(k => k.state !== 'dead').length;
+  const line = $('api-status-line');
+  if (state.keys.length) {
+    line.classList.add('ok');
+    $('api-status-text').textContent = `${live}/${state.keys.length} clé(s) utilisable(s)`;
+    $('api-panel').classList.add('ok');
+  } else {
+    line.classList.remove('ok');
+    $('api-status-text').textContent = 'Aucune clé API enregistrée';
+    $('api-panel').classList.remove('ok');
+  }
+  $('api-keys-status').innerHTML = state.keys.map((k, i) => {
+    const cool = k.state === 'cool' && k.coolUntil > Date.now();
+    const cls = k.state === 'dead' ? 'dead' : cool ? 'cool' : '';
+    const label = k.state === 'dead' ? 'invalide' : cool ? `pause ${Math.ceil((k.coolUntil - Date.now()) / 1000)}s` : (k.busy ? `active ×${k.busy}` : 'prête');
+    return `<div class="key-row"><span class="key-id">#${i + 1} ${esc(maskKey(k.key))}</span><span class="key-state ${cls}">${label}</span></div>`;
+  }).join('');
+}
+setInterval(() => { if (state.keys.some(k => k.state === 'cool')) { state.keys.forEach(k => { if (k.state === 'cool' && k.coolUntil <= Date.now()) k.state = 'ok'; }); renderKeys(); wakeKeyWaiters(); } }, 1000);
+
+function wakeKeyWaiters() {
+  const waiters = state.keyWaiters.splice(0);
+  waiters.forEach(w => w());
+}
+
+// Prend la clé disponible la moins chargée. maxBusy limite les tâches simultanées par clé.
+async function acquireKey(signal, maxBusy = 1) {
+  for (;;) {
+    if (signal?.aborted) throw new DOMException('Arrêt', 'AbortError');
+    const usable = state.keys.filter(k => k.state === 'ok' || (k.state === 'cool' && k.coolUntil <= Date.now()));
+    if (!state.keys.length || !state.keys.some(k => k.state !== 'dead')) throw new Error('Aucune clé API valide');
+    const free = usable.filter(k => k.busy < maxBusy).sort((a, b) => a.busy - b.busy)[0];
+    if (free) { free.state = 'ok'; free.busy++; renderKeys(); return free; }
+    await new Promise(res => { state.keyWaiters.push(res); setTimeout(res, 1500); });
+  }
+}
+function releaseKey(k) { if (k) { k.busy = Math.max(0, k.busy - 1); renderKeys(); wakeKeyWaiters(); } }
+
+function markKeyFromStatus(k, status) {
+  if (status === 401 || status === 403) { k.state = 'dead'; journal(`Clé ${maskKey(k.key)} refusée (${status})`, 'error', '🔑'); }
+  else if (status === 429) { k.state = 'cool'; k.coolUntil = Date.now() + KEY_COOLDOWN_MS; journal(`Clé ${maskKey(k.key)} en pause (quota)`, 'warn', '⏸'); }
+  renderKeys();
+}
+
+class HttpError extends Error { constructor(status, msg) { super(msg); this.status = status; } }
+
+async function agnesFetch(k, url, opts, signal) {
+  const res = await fetch(url, {
+    ...opts, signal,
+    headers: { 'Authorization': 'Bearer ' + k.key, 'Content-Type': 'application/json', ...(opts.headers || {}) }
+  });
+  const text = await res.text();
+  let json = null;
+  try { json = text ? JSON.parse(text) : null; } catch {}
+  if (!res.ok) {
+    markKeyFromStatus(k, res.status);
+    const detail = json?.error?.message || json?.detail || json?.message || text.slice(0, 300) || res.statusText;
+    throw new HttpError(res.status, `HTTP ${res.status} : ${typeof detail === 'string' ? detail : JSON.stringify(detail)}`);
+  }
+  return json;
+}
+
+// Réessaie avec une autre clé sur 401/403/429/5xx et erreurs réseau.
+async function withKeyRetry(fn, signal, label, tries = 4) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    const k = await acquireKey(signal);
+    try { return await fn(k); }
+    catch (e) {
+      if (e.name === 'AbortError') throw e;
+      lastErr = e;
+      const retriable = !(e instanceof HttpError) || [401, 403, 429, 500, 502, 503, 504].includes(e.status);
+      debug(label, `Tentative ${i + 1} échouée : ${e.message}`, 'warn');
+      if (!retriable) throw e;
+      await sleep(1500 * (i + 1), signal);
+    } finally { releaseKey(k); }
+  }
+  throw lastErr;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// PARTIS
+// ══════════════════════════════════════════════════════════════════
+function loadParties() {
+  const raw = store.get(PARTIES_STORAGE);
+  if (raw) {
+    try {
+      const ids = JSON.parse(raw).filter(id => partyById(id));
+      state.selected = new Set(ids);
+    } catch {}
+  }
+  renderParties();
+}
+
+function renderParties() {
+  $('parties-grid').innerHTML = PARTIES_CATALOG.map(p => `
+    <div class="party-card ${state.selected.has(p.id) ? 'selected' : ''}" data-party="${p.id}" role="checkbox" aria-checked="${state.selected.has(p.id)}" tabindex="0">
+      <div class="pc-name"><span class="pc-dot" style="background:${p.color}"></span>${esc(p.tag)}</div>
+      <div class="pc-tag">${esc(p.name)}</div>
+      <div class="pc-tag" style="margin-top:.25rem;text-transform:none">🐱 ${esc(p.chatBreed)}</div>
+    </div>`).join('');
+}
+
+function toggleParty(id) {
+  if (state.running) return;
+  if (state.selected.has(id)) state.selected.delete(id); else state.selected.add(id);
+  store.set(PARTIES_STORAGE, JSON.stringify([...state.selected]));
+  renderParties();
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ÉTAPE 1 : ACTUALITÉS (RSS Google News)
+// ══════════════════════════════════════════════════════════════════
+async function fetchTextWithProxies(url, signal) {
+  let lastErr;
+  for (const wrap of CORS_PROXIES) {
+    const target = wrap(url);
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 12000);
+      const onAbort = () => ctrl.abort();
+      signal?.addEventListener('abort', onAbort, { once: true });
+      try {
+        const res = await fetch(target, { signal: ctrl.signal });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const txt = await res.text();
+        if (!txt.includes('<item')) throw new Error('Réponse sans articles');
+        debug('RSS', 'OK via ' + (target === url ? 'accès direct' : new URL(target).hostname), 'success');
+        return txt;
+      } finally { clearTimeout(timer); signal?.removeEventListener('abort', onAbort); }
+    } catch (e) {
+      if (signal?.aborted) throw new DOMException('Arrêt', 'AbortError');
+      lastErr = e;
+      debug('RSS', `Échec ${target === url ? 'direct' : new URL(target).hostname} : ${e.message}`, 'warn');
+    }
+  }
+  throw lastErr || new Error('Flux inaccessible');
+}
+
+function parseRss(xml) {
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  return [...doc.querySelectorAll('item')].map(it => {
+    const rawTitle = it.querySelector('title')?.textContent?.trim() || '';
+    const source = it.querySelector('source')?.textContent?.trim() || '';
+    // Google News ajoute " - Source" à la fin du titre
+    const title = source && rawTitle.endsWith(' - ' + source) ? rawTitle.slice(0, -(source.length + 3)) : rawTitle;
+    const pub = it.querySelector('pubDate')?.textContent;
+    return { title, source, link: it.querySelector('link')?.textContent?.trim() || '', date: pub ? new Date(pub) : null };
+  }).filter(n => n.title);
+}
+
+async function fetchPartyNews(p, signal) {
+  const xml = await fetchTextWithProxies(p.rss, signal);
+  let items = parseRss(xml);
+  const twoWeeks = Date.now() - 14 * 864e5;
+  const recent = items.filter(n => !n.date || n.date.getTime() >= twoWeeks);
+  if (recent.length) items = recent;
+  const relevant = items.filter(n => p.keywords.test(n.title));
+  const pool = relevant.length ? relevant : items;
+  pool.sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0));
+  return pool.slice(0, NEWS_PER_PARTY);
+}
+
+function renderNews() {
+  const rows = [];
+  for (const p of PARTIES_CATALOG) {
+    for (const n of state.news[p.id] || []) {
+      const d = n.date ? n.date.toLocaleDateString('fr-FR', { day:'2-digit', month:'short' }) : '';
+      rows.push(`<div class="news-item"><span class="news-party" style="color:${p.color}">${esc(p.tag)}</span><div><div class="news-title">${n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a>` : esc(n.title)}</div><div class="news-source">${esc(n.source)}${d ? ' · ' + d : ''}</div></div></div>`);
+    }
+  }
+  $('news-view').innerHTML = rows.join('') || '<div class="news-item">Aucune actualité.</div>';
+  $('news-badge').textContent = rows.length + ' titres';
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ÉTAPE 2 : SCÉNARIO (agnes-2.5-flash)
+// ══════════════════════════════════════════════════════════════════
+function buildScriptPrompt(parties) {
+  const newsBlock = parties.map(p => {
+    const lines = state.news[p.id].map((n, i) => `  ${i + 1}. ${n.title}${n.source ? ' (' + n.source + ')' : ''}${n.date ? ' [' + n.date.toLocaleDateString('fr-FR') + ']' : ''}`).join('\n');
+    return `### ${p.id} — ${p.name}\n${lines}`;
+  }).join('\n\n');
+
+  return `Tu es rédacteur en chef d'un journal télévisé satirique mais rigoureux, joué par des chatons dans un univers à la Wes Anderson.
+
+RÈGLES STRICTES :
+- Équilibre et neutralité : même longueur et même ton pour chaque parti, aucune prise de position.
+- N'invente AUCUN fait, chiffre, citation ou nom qui ne figure pas dans les titres fournis. Reformule seulement.
+- Pour chaque parti, choisis LE titre le plus significatif parmi ceux fournis.
+- Textes en français, phrases courtes, lisibles à voix haute en 10 à 15 secondes.
+- "video_prompt_en" : description visuelle en anglais, sans texte à l'écran, sans personne réelle, sans logo. Décris un décor symbolique lié au sujet et l'action du reporter chaton (3 plans enchaînés).
+
+PRÉSENTATEUR : ${ANCHOR.name}, ${ANCHOR.desc}.
+
+REPORTERS :
+${parties.map(p => `- ${p.id} : chaton ${p.chatBreed}, ${p.helmet}, ${p.outfit}`).join('\n')}
+
+ACTUALITÉS :
+${newsBlock}
+
+Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, au format :
+{
+  "title": "titre du JT",
+  "logline": "une phrase de présentation",
+  "anchor_intro": "texte d'ouverture lu par le présentateur (2-3 phrases)",
+  "anchor_outro": "texte de clôture (1-2 phrases)",
+  "anchor_video_prompt_en": "décor du plateau et gestes du présentateur",
+  "segments": [
+    {
+      "party_id": "${parties[0].id}",
+      "headline": "titre court de l'incrustation (max 60 caractères)",
+      "summary": "résumé factuel en une phrase",
+      "source": "nom du média d'origine",
+      "reporter_name": "nom fantaisiste du reporter chaton",
+      "location": "lieu du duplex (fictif ou générique)",
+      "reporter_line": "texte lu par le reporter (2-3 phrases)",
+      "shots": ["plan 1", "plan 2", "plan 3"],
+      "video_prompt_en": "visual description in English"
+    }
+  ]
+}
+Un segment par parti, dans cet ordre : ${parties.map(p => p.id).join(', ')}.`;
+}
+
+function extractJson(text) {
+  let t = String(text || '').trim();
+  t = t.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '');
+  const a = t.indexOf('{'), b = t.lastIndexOf('}');
+  if (a < 0 || b <= a) throw new Error('Pas de JSON dans la réponse');
+  return JSON.parse(t.slice(a, b + 1));
+}
+
+async function generateScript(parties, signal) {
+  const prompt = buildScriptPrompt(parties);
+  debug('SCRIPT', 'Prompt envoyé', 'api', prompt);
+  const data = await withKeyRetry(k => agnesFetch(k, API_BASE + '/chat/completions', {
+    method: 'POST',
+    body: JSON.stringify({
+      model: MODEL_TEXT,
+      temperature: 0.6,
+      messages: [
+        { role: 'system', content: 'Tu réponds exclusivement en JSON valide.' },
+        { role: 'user', content: prompt }
+      ]
+    })
+  }, signal), signal, 'SCRIPT');
+  const content = data?.choices?.[0]?.message?.content;
+  debug('SCRIPT', 'Réponse brute', 'response', content);
+  const script = extractJson(content);
+
+  // Validation et réalignement : un segment par parti sélectionné, dans l'ordre.
+  const segs = Array.isArray(script.segments) ? script.segments : [];
+  script.segments = parties.map(p => {
+    const s = segs.find(x => String(x.party_id).toLowerCase() === p.id) || {};
+    const fallback = state.news[p.id][0];
+    return {
+      party_id: p.id,
+      headline: s.headline || fallback.title.slice(0, 60),
+      summary: s.summary || fallback.title,
+      source: s.source || fallback.source,
+      reporter_name: s.reporter_name || `Reporter ${p.chatBreed}`,
+      location: s.location || 'En duplex',
+      reporter_line: s.reporter_line || fallback.title,
+      shots: Array.isArray(s.shots) ? s.shots.slice(0, 3) : [],
+      video_prompt_en: s.video_prompt_en || 'The reporter kitten stands in the center of a symmetrical pastel set and speaks to camera.'
+    };
+  });
+  script.title = script.title || 'Le JT des Chatons';
+  script.anchor_intro = script.anchor_intro || 'Bonsoir et bienvenue dans votre journal.';
+  script.anchor_outro = script.anchor_outro || 'Merci de nous avoir suivis. Bonne soirée.';
+  return script;
+}
+
+function renderScript() {
+  const s = state.script;
+  const scenes = [`
+    <div class="script-scene">
+      <div class="sc-head">Ouverture · Plateau</div>
+      <div class="sc-line"><span class="sc-label">Personnage</span><span class="sc-character">${esc(ANCHOR.name)} (${esc(ANCHOR.desc)})</span></div>
+      <div class="sc-line"><span class="sc-label">Dialogue</span><span class="sc-dialogue">« ${esc(s.anchor_intro)} »</span></div>
+    </div>`];
+  for (const seg of s.segments) {
+    const p = partyById(seg.party_id);
+    scenes.push(`
+    <div class="script-scene" style="border-left-color:${p.color}">
+      <span class="sc-party" style="background:${p.color}">${esc(p.tag)}</span>
+      <div class="sc-head">${esc(seg.location)}</div>
+      <div class="sc-line"><span class="sc-label">Incrust.</span><span class="sc-overlay">${esc(seg.headline)}</span></div>
+      <div class="sc-line"><span class="sc-label">Reporter</span><span class="sc-character">${esc(seg.reporter_name)} · chaton ${esc(p.chatBreed)}, ${esc(p.helmet)}</span></div>
+      <div class="sc-line"><span class="sc-label">Dialogue</span><span class="sc-dialogue">« ${esc(seg.reporter_line)} »</span></div>
+      <div class="sc-line"><span class="sc-label">Source</span>${esc(seg.source)} · ${esc(seg.summary)}</div>
+      ${seg.shots.length ? `<div class="sc-shots">${seg.shots.map((sh, i) => `Plan ${i + 1} : ${esc(sh)}`).join('<br>')}</div>` : ''}
+    </div>`);
+  }
+  scenes.push(`
+    <div class="script-scene">
+      <div class="sc-head">Clôture · Plateau</div>
+      <div class="sc-line"><span class="sc-label">Dialogue</span><span class="sc-dialogue">« ${esc(s.anchor_outro)} »</span></div>
+    </div>`);
+  $('script-view').innerHTML = `
+    <div class="script-title">${esc(s.title)}</div>
+    <div class="script-logline">${esc(s.logline || '')}</div>
+    <div class="script-meta">${s.segments.length} sujets · ${s.segments.length + 1} séquences vidéo · ${MODEL_VIDEO} · ${VIDEO_SECONDS}s/plan</div>
+    ${scenes.join('')}`;
+  $('script-badge').textContent = s.segments.length + ' sujets';
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ÉTAPE 3 : VIDÉOS (agnes-video-2.5-flash, en parallèle)
+// ══════════════════════════════════════════════════════════════════
+function buildAnchorPrompt() {
+  return `${STYLE_LOCK} Scene: a perfectly symmetrical retro TV news studio in pastel pink and mint, a wooden news desk centered, `
+    + `${ANCHOR.descEn} sits behind the desk facing the camera. ${state.script.anchor_video_prompt_en || ''} `
+    + `Shot sequence: wide symmetrical establishing shot, slow push-in to medium shot, the anchor kitten nods and gestures with one paw. Ambient studio sound.`;
+}
+
+function buildPartyPrompt(seg, p) {
+  return `${STYLE_LOCK} Main character: a ${p.breedEn} kitten field reporter wearing a retro motorcycle helmet in ${p.brandColorEn} `
+    + `and a ${p.brandColorEn} Shaolin kung-fu robe, holding a tiny vintage microphone. The set uses ${p.brandColorEn} as accent color. `
+    + `${seg.video_prompt_en} `
+    + (seg.shots.length ? `Shot sequence: ${seg.shots.join(' / ')}. ` : '')
+    + `Multi-shot editing, centered framing, deadpan expression, ambient outdoor sound.`;
+}
+
+function buildScenes() {
+  state.scenes = [{ id:'anchor', kind:'anchor', title:'Ouverture plateau', color:'#e5c15a', prompt: buildAnchorPrompt(), status:'pending' }];
+  for (const seg of state.script.segments) {
+    const p = partyById(seg.party_id);
+    state.scenes.push({ id:p.id, kind:'party', party:p, seg, title:`${p.tag} · ${seg.headline}`, color:p.color, prompt: buildPartyPrompt(seg, p), status:'pending' });
+  }
+}
+
+function renderSceneCard(sc) {
+  let card = $('card-' + sc.id);
+  if (!card) {
+    card = document.createElement('div');
+    card.id = 'card-' + sc.id;
+    $('videos-grid').appendChild(card);
+  }
+  card.className = 'scene-card ' + ({ generating:'generating', polling:'generating', done:'done', error:'error' }[sc.status] || '');
+  const head = `<div class="scene-card-header" style="box-shadow:inset 3px 0 0 ${sc.color}"><span class="scene-card-title" title="${esc(sc.title)}">${esc(sc.title)}</span>${sc.status === 'generating' || sc.status === 'polling' ? '<div class="spinner-mini"></div>' : sc.status === 'done' ? '✓' : sc.status === 'error' ? '✕' : '…'}</div>`;
+  let body;
+  if (sc.status === 'done') {
+    body = `<video src="${esc(sc.url)}" controls playsinline preload="metadata"></video>
+      <a class="scene-download" href="${esc(sc.url)}" target="_blank" rel="noopener" download="jt-${esc(sc.id)}.mp4">⬇ Télécharger</a>`;
+  } else if (sc.status === 'error') {
+    body = `<div class="scene-placeholder">✕ ${esc(sc.error || 'Erreur')}</div><button type="button" class="scene-download" data-retry="${esc(sc.id)}">↻ Relancer cette séquence</button>`;
+  } else {
+    const msg = { pending:'En file d\'attente', generating:'Envoi de la demande…', polling:`Génération ${sc.progress != null ? sc.progress + ' %' : 'en cours'}…` }[sc.status] || '';
+    body = `<div class="scene-placeholder">${sc.status !== 'pending' ? '<div class="spinner-mini"></div>' : ''}${esc(msg)}</div>`;
+  }
+  card.innerHTML = head + `<div class="scene-card-body">${body}</div>`;
+  const done = state.scenes.filter(s => s.status === 'done').length;
+  $('videos-count').textContent = `${done}/${state.scenes.length}`;
+}
+
+async function generateVideo(sc, signal) {
+  // La même clé doit servir à créer la tâche et à la suivre.
+  let attempt = 0;
+  for (;;) {
+    attempt++;
+    const k = await acquireKey(signal);
+    try {
+      sc.status = 'generating'; sc.progress = null; renderSceneCard(sc);
+      debug('VIDEO', `${sc.id} → création (clé ${maskKey(k.key)})`, 'api', sc.prompt);
+      const created = await agnesFetch(k, API_BASE + '/videos', {
+        method: 'POST',
+        body: JSON.stringify({ model: MODEL_VIDEO, prompt: sc.prompt, seconds: VIDEO_SECONDS, mode: 'text', size: '720P', aspect_ratio: VIDEO_ASPECT })
+      }, signal);
+      const videoId = created?.video_id || created?.id || created?.task_id;
+      if (!videoId) throw new Error('Pas de video_id dans la réponse');
+      debug('VIDEO', `${sc.id} → tâche ${videoId}`, 'response', created);
+      journal(`Séquence « ${sc.title} » lancée`, '', '🎬');
+
+      sc.status = 'polling'; renderSceneCard(sc);
+      await sleep(VIDEO_FIRST_POLL_DELAY_SEC * 1000, signal);
+      for (let i = 0; i < VIDEO_MAX_POLL_ATTEMPTS; i++) {
+        let r;
+        try {
+          r = await agnesFetch(k, `${POLL_BASE}?video_id=${encodeURIComponent(videoId)}&model_name=${encodeURIComponent(MODEL_VIDEO)}`, { method: 'GET' }, signal);
+        } catch (e) {
+          if (e.name === 'AbortError') throw e;
+          if (e instanceof HttpError && (e.status === 401 || e.status === 403)) throw e;
+          debug('VIDEO', `${sc.id} suivi : ${e.message}`, 'warn');
+          await sleep(8000, signal);
+          continue;
+        }
+        const st = r?.status;
+        if (typeof r?.progress === 'number') { sc.progress = r.progress; renderSceneCard(sc); }
+        if (st === 'completed') {
+          const url = r.url || r?.metadata?.url || r?.video_url;
+          if (!url) throw new Error('Terminé mais sans URL');
+          sc.url = url; sc.status = 'done'; renderSceneCard(sc);
+          journal(`Séquence « ${sc.title} » prête`, 'success', '✅');
+          debug('VIDEO', `${sc.id} terminé`, 'success', r);
+          return;
+        }
+        if (st === 'failed') {
+          const err = new Error(r?.error?.message || 'Génération échouée côté serveur');
+          err.serverFailed = true;
+          throw err;
+        }
+        await sleep(VIDEO_POLL_INTERVALS[Math.min(i, VIDEO_POLL_INTERVALS.length - 1)] * 1000, signal);
+      }
+      throw new Error('Délai dépassé');
+    } catch (e) {
+      if (e.name === 'AbortError') throw e;
+      const retriable = attempt < 3 && (!(e instanceof HttpError) || [401, 403, 429, 500, 502, 503, 504].includes(e.status));
+      debug('VIDEO', `${sc.id} : ${e.message}`, retriable ? 'warn' : 'error');
+      if (!retriable) { sc.status = 'error'; sc.error = e.message; renderSceneCard(sc); journal(`Séquence « ${sc.title} » en échec : ${e.message}`, 'error', '✕'); return; }
+      journal(`Séquence « ${sc.title} » : nouvel essai (${e.message})`, 'warn', '↻');
+      await sleep(3000 * attempt, signal);
+    } finally { releaseKey(k); }
+  }
+}
+
+async function generateAllVideos(signal) {
+  state.scenes.forEach(renderSceneCard);
+  await Promise.all(state.scenes.map(sc => generateVideo(sc, signal)));
+}
+
+async function retryScene(id) {
+  const sc = state.scenes.find(s => s.id === id);
+  if (!sc || state.running) return;
+  state.running = true;
+  state.abort = new AbortController();
+  setRunningUI(true);
+  try {
+    await generateVideo(sc, state.abort.signal);
+    updatePlayerAvailability();
+  } catch (e) {
+    if (e.name !== 'AbortError') toast(e.message, 'error');
+  } finally { state.running = false; setRunningUI(false); }
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ORCHESTRATION
+// ══════════════════════════════════════════════════════════════════
+function setRunningUI(on) {
+  $('launch-btn').disabled = on;
+  $('stop-btn').classList.toggle('visible', on);
+  if (!on) setStatus(null);
+}
+
+async function launch() {
+  if (state.running) return;
+  if (!state.keys.some(k => k.state !== 'dead')) { toast('Ajoute au moins une clé API Agnes', 'error'); $('api-keys-input').focus(); return; }
+  const parties = PARTIES_CATALOG.filter(p => state.selected.has(p.id));
+  if (!parties.length) { toast('Sélectionne au moins un parti', 'warn'); return; }
+
+  state.running = true;
+  state.abort = new AbortController();
+  const signal = state.abort.signal;
+  setRunningUI(true);
+  state.news = {}; state.script = null; state.scenes = [];
+  $('videos-grid').innerHTML = '';
+  ['section-news', 'section-script', 'section-videos', 'section-player'].forEach(id => $(id).classList.add('hidden'));
+  $('play-film-btn').disabled = true; $('replay-btn').disabled = true;
+  journal(`Lancement du JT : ${parties.map(p => p.tag).join(', ')}`, 'highlight', '▶');
+
+  try {
+    // 1. Actualités
+    setStatus('Récupération des actualités…');
+    const results = await Promise.allSettled(parties.map(async p => {
+      const items = await fetchPartyNews(p, signal);
+      state.news[p.id] = items;
+      journal(`${p.tag} : ${items.length} titre(s) récupéré(s)`, items.length ? '' : 'warn', '📰');
+    }));
+    if (signal.aborted) throw new DOMException('Arrêt', 'AbortError');
+    results.forEach((r, i) => { if (r.status === 'rejected') journal(`${parties[i].tag} : actualités inaccessibles (${r.reason?.message || r.reason})`, 'warn', '⚠'); });
+    const kept = parties.filter(p => state.news[p.id]?.length);
+    if (!kept.length) throw new Error('Aucune actualité récupérée. Les flux RSS sont peut-être bloqués par le navigateur (CORS).');
+    if (kept.length < parties.length) toast(`${parties.length - kept.length} parti(s) ignoré(s) faute d'actualités`, 'warn');
+    renderNews();
+    showSection('section-news', false);
+
+    // 2. Scénario
+    setStatus('Écriture du scénario…');
+    journal('Écriture du scénario par l\'IA…', '', '✍');
+    state.script = await generateScript(kept, signal);
+    renderScript();
+    showSection('section-script');
+    journal(`Scénario prêt : « ${state.script.title} »`, 'success', '📜');
+
+    // 3. Vidéos
+    buildScenes();
+    showSection('section-videos');
+    showSection('section-player', false);
+    $('player-badge').textContent = '0';
+    const n = state.keys.filter(k => k.state !== 'dead').length;
+    setStatus(`Génération de ${state.scenes.length} séquences (${n} en parallèle)…`);
+    journal(`Génération de ${state.scenes.length} séquences vidéo, ${n} à la fois`, 'highlight', '🎞');
+    await generateAllVideos(signal);
+
+    const ok = state.scenes.filter(s => s.status === 'done').length;
+    updatePlayerAvailability();
+    if (ok === state.scenes.length) { toast('JT prêt à la diffusion'); journal('Toutes les séquences sont prêtes', 'success', '🎉'); }
+    else if (ok) { toast(`${ok}/${state.scenes.length} séquences prêtes`, 'warn'); journal(`${ok}/${state.scenes.length} séquences prêtes. Les autres peuvent être relancées.`, 'warn', '⚠'); }
+    else { toast('Aucune séquence générée', 'error'); }
+  } catch (e) {
+    if (e.name === 'AbortError') { journal('Arrêt demandé', 'warn', '⏹'); toast('Arrêté', 'warn'); }
+    else { journal('Erreur : ' + e.message, 'error', '✕'); debug('ERREUR', e.message, 'error', e.stack); toast(e.message, 'error'); }
+  } finally {
+    state.running = false;
+    setRunningUI(false);
+  }
+}
+
+function stop() {
+  if (state.abort) state.abort.abort();
+  state.scenes.forEach(sc => { if (sc.status === 'generating' || sc.status === 'polling' || sc.status === 'pending') { sc.status = 'error'; sc.error = 'Arrêté'; renderSceneCard(sc); } });
+}
+
+function updatePlayerAvailability() {
+  const ok = state.scenes.filter(s => s.status === 'done').length;
+  $('player-badge').textContent = ok;
+  $('play-film-btn').disabled = ok === 0;
+  $('replay-btn').disabled = ok === 0;
+  if (ok) showSection('section-player');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// LECTEUR (canvas + incrustations + voix)
+// ══════════════════════════════════════════════════════════════════
+const player = { active: false, raf: 0, video: null, cur: null, idx: 0, list: [], token: 0, hintTimer: 0 };
+
+function pickFrenchVoice() {
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => /^fr(-|_)FR/i.test(v.lang) && /google|thomas|amélie|audrey|marie|natural/i.test(v.name))
+    || voices.find(v => /^fr/i.test(v.lang)) || null;
+}
+
+function speak(text, token) {
+  return new Promise(res => {
+    if (!$('voice-toggle').checked || !('speechSynthesis' in window) || !text) return res();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'fr-FR'; u.rate = 1.02;
+    const v = pickFrenchVoice(); if (v) u.voice = v;
+    const done = () => res();
+    u.onend = done; u.onerror = done;
+    // Sécurité : certains navigateurs ne déclenchent jamais onend.
+    setTimeout(done, Math.max(4000, text.length * 90));
+    if (token !== player.token) return res();
+    speechSynthesis.speak(u);
+  });
+}
+
+function wrapText(ctx, text, maxW) {
+  const words = String(text).split(/\s+/); const lines = []; let line = '';
+  for (const w of words) {
+    const test = line ? line + ' ' + w : w;
+    if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; } else line = test;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+function drawFrame() {
+  if (!player.active) return;
+  const c = $('player-canvas'), ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
+  const v = player.video, sc = player.cur;
+  if (v && v.readyState >= 2) {
+    const r = Math.min(W / v.videoWidth, H / v.videoHeight);
+    const w = v.videoWidth * r, h = v.videoHeight * r;
+    ctx.drawImage(v, (W - w) / 2, (H - h) / 2, w, h);
+  }
+  if (sc) {
+    const u = H / 720;
+    // Bandeau haut : logo JT + parti
+    ctx.fillStyle = 'rgba(10,10,18,.72)';
+    ctx.fillRect(28 * u, 26 * u, 330 * u, 46 * u);
+    ctx.fillStyle = '#e5c15a';
+    ctx.font = `600 ${20 * u}px ${getComputedStyle(document.body).fontFamily}`;
+    ctx.textBaseline = 'middle';
+    ctx.fillText('JT DES CHATONS · DIRECT', 44 * u, 49 * u);
+
+    // Bandeau bas (lower third)
+    const y = H - 168 * u;
+    ctx.fillStyle = sc.color;
+    ctx.fillRect(0, y, 130 * u, 110 * u);
+    ctx.fillStyle = 'rgba(245,240,228,.94)';
+    ctx.fillRect(130 * u, y, W - 130 * u, 110 * u);
+    ctx.fillStyle = '#fff';
+    ctx.font = `700 ${30 * u}px ${getComputedStyle(document.body).fontFamily}`;
+    ctx.textAlign = 'center';
+    ctx.fillText(sc.kind === 'anchor' ? 'JT' : sc.party.tag, 65 * u, y + 55 * u);
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#16161f';
+    ctx.font = `700 ${28 * u}px ${getComputedStyle(document.body).fontFamily}`;
+    const headline = sc.kind === 'anchor' ? (state.script?.title || 'Le JT des Chatons') : sc.seg.headline;
+    ctx.fillText(wrapText(ctx, headline, W - 190 * u)[0] || '', 154 * u, y + 38 * u);
+    ctx.fillStyle = '#4a4858';
+    ctx.font = `500 ${19 * u}px ${getComputedStyle(document.body).fontFamily}`;
+    const sub = sc.kind === 'anchor' ? `${ANCHOR.name} · Présentateur` : `${sc.seg.reporter_name} · ${sc.seg.location} · Source : ${sc.seg.source}`;
+    ctx.fillText(wrapText(ctx, sub, W - 190 * u)[0] || '', 154 * u, y + 78 * u);
+  }
+  player.raf = requestAnimationFrame(drawFrame);
+}
+
+function resizeCanvas() {
+  const c = $('player-canvas');
+  const W = window.innerWidth, H = window.innerHeight;
+  const ratio = 16 / 9;
+  let w = W, h = W / ratio; if (h > H) { h = H; w = H * ratio; }
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+  c.style.width = w + 'px'; c.style.height = h + 'px';
+}
+
+function playClip(sc, token) {
+  return new Promise(res => {
+    if (token !== player.token) return res();
+    const v = document.createElement('video');
+    v.src = sc.url; v.playsInline = true; v.muted = false;
+    v.volume = $('voice-toggle').checked ? 0.25 : 1;
+    v.crossOrigin = 'anonymous';
+    let finished = false;
+    const end = () => { if (!finished) { finished = true; res(); } };
+    v.onended = end;
+    v.onerror = () => {
+      // Repli sans CORS : l'affichage reste possible, seule la lecture des pixels serait bloquée.
+      if (v.crossOrigin) { v.removeAttribute('crossorigin'); v.crossOrigin = null; v.src = sc.url; v.play().catch(() => {}); return; }
+      debug('LECTEUR', `Lecture impossible : ${sc.id}`, 'error'); end();
+    };
+    player.video = v; player.cur = sc;
+    v.play().catch(() => { v.muted = true; v.play().catch(end); });
+    setTimeout(end, 60000);
+  });
+}
+
+async function playFilm() {
+  const list = state.scenes.filter(s => s.status === 'done');
+  if (!list.length) return;
+  const token = ++player.token;
+  player.active = true;
+  $('player-overlay').classList.add('visible');
+  resizeCanvas();
+  showHint();
+  cancelAnimationFrame(player.raf);
+  drawFrame();
+  try { await document.documentElement.requestFullscreen?.(); } catch {}
+  journal('Diffusion du JT', 'highlight', '📺');
+
+  for (const sc of list) {
+    if (token !== player.token) return;
+    const text = sc.kind === 'anchor' ? state.script.anchor_intro : sc.seg.reporter_line;
+    // La séquence avance quand la vidéo ET la narration sont terminées.
+    await Promise.all([playClip(sc, token), speak(text, token)]);
+  }
+  if (token !== player.token) return;
+  const anchorScene = list.find(s => s.kind === 'anchor');
+  if (anchorScene) { player.cur = anchorScene; player.video?.pause(); }
+  await speak(state.script.anchor_outro, token);
+  if (token === player.token) closePlayer();
+}
+
+function showHint() {
+  const h = $('player-hint-overlay');
+  h.classList.remove('hidden');
+  clearTimeout(player.hintTimer);
+  player.hintTimer = setTimeout(() => h.classList.add('hidden'), 3000);
+}
+
+function closePlayer() {
+  player.token++;
+  player.active = false;
+  cancelAnimationFrame(player.raf);
+  if (player.video) { player.video.pause(); player.video.removeAttribute('src'); player.video.load(); player.video = null; }
+  player.cur = null;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  $('player-overlay').classList.remove('visible');
+  if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ÉVÉNEMENTS
+// ══════════════════════════════════════════════════════════════════
+function copyLogs() {
+  const active = $('tech-body').classList.contains('hidden') ? $('journal-body') : $('tech-body');
+  const txt = active.innerText;
+  (navigator.clipboard?.writeText(txt) || Promise.reject()).then(() => toast('Journal copié')).catch(() => {
+    const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('Journal copié'); } catch { toast('Copie impossible', 'error'); }
+    ta.remove();
+  });
+}
+
+function init() {
+  loadKeys();
+  loadParties();
+
+  $('api-save-btn').addEventListener('click', saveKeys);
+  $('launch-btn').addEventListener('click', launch);
+  $('stop-btn').addEventListener('click', stop);
+  $('play-film-btn').addEventListener('click', playFilm);
+  $('replay-btn').addEventListener('click', () => { closePlayer(); playFilm(); });
+
+  $('parties-grid').addEventListener('click', e => { const c = e.target.closest('[data-party]'); if (c) toggleParty(c.dataset.party); });
+  $('parties-grid').addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && e.target.dataset.party) { e.preventDefault(); toggleParty(e.target.dataset.party); } });
+
+  $('videos-grid').addEventListener('click', e => { const b = e.target.closest('[data-retry]'); if (b) retryScene(b.dataset.retry); });
+
+  document.querySelectorAll('[data-toggle]').forEach(h => h.addEventListener('click', () => $(h.dataset.toggle).classList.toggle('open')));
+
+  document.querySelectorAll('.debug-tab').forEach(t => t.addEventListener('click', () => {
+    document.querySelectorAll('.debug-tab').forEach(x => x.classList.toggle('active', x === t));
+    $('journal-body').classList.toggle('hidden', t.dataset.tab !== 'journal');
+    $('tech-body').classList.toggle('hidden', t.dataset.tab !== 'tech');
+    $('debug-panel').classList.remove('collapsed');
+  }));
+  $('debug-copy-btn').addEventListener('click', copyLogs);
+  $('debug-clear-btn').addEventListener('click', () => { $('journal-body').innerHTML = ''; $('tech-body').innerHTML = ''; });
+  $('debug-collapse-btn').addEventListener('click', () => {
+    const p = $('debug-panel'); p.classList.toggle('collapsed');
+    $('debug-collapse-btn').textContent = p.classList.contains('collapsed') ? '+' : '−';
+  });
+
+  $('player-overlay').addEventListener('click', closePlayer);
+  $('player-overlay').addEventListener('mousemove', showHint);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && player.active) closePlayer(); });
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && player.active) closePlayer(); });
+  window.addEventListener('resize', () => { if (player.active) resizeCanvas(); });
+  if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
+  journal('Studio prêt. Ajoute tes clés API puis lance le JT.', '', '🎬');
+  debug('INIT', `Texte : ${MODEL_TEXT} · Vidéo : ${MODEL_VIDEO} (${VIDEO_SECONDS}s, 720P, ${VIDEO_ASPECT})`);
+}
+
+init();
+</script>
+</body>
+</html>
