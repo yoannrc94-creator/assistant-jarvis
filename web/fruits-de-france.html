@@ -290,8 +290,8 @@ label.lbl{display:block;font-size:.72rem;color:var(--dim);margin-bottom:.5rem;te
 const API_BASE = 'https://apihub.agnes-ai.com/v1';
 const POLL_BASE = 'https://apihub.agnes-ai.com/agnesapi';
 const MODEL_TEXT = 'agnes-2.5-flash';
-const MODEL_IMAGE = 'agnes-image-2.1-flash';
-const MODEL_VIDEO = 'agnes-video-v2.0';
+const MODEL_IMAGE = 'agnes-image-2.5-flash';
+const MODEL_VIDEO = 'agnes-video-2.5-flash';
 const FRAME_RATE = 24;
 
 const VIDEO_FIRST_POLL_DELAY_SEC = 60;
@@ -715,10 +715,12 @@ function decodeCompositeId(composite){
 }
 
 async function createVideoTask(prompt, imageUrl, duration){
-  const body={model:MODEL_VIDEO,prompt:sanitizeForApi(prompt),num_frames:duration,frame_rate:FRAME_RATE};
-  if(imageUrl)body.image=imageUrl;
+  // API Agnes Video 2.5 : mode keyframe (image de départ) ou text, durée en secondes (4 à 12)
+  const seconds=Math.min(12,Math.max(4,Math.round(duration/FRAME_RATE)));
+  const body={model:MODEL_VIDEO,prompt:sanitizeForApi(prompt),seconds:String(seconds),size:'720P',aspect_ratio:'9:16',mode:imageUrl?'keyframe':'text'};
+  if(imageUrl)body.first_frame=imageUrl;
   debugLog('ai','PROMPT VIDÉO','Envoi ('+body.prompt.length+' chars)',body.prompt.slice(0,600)+'…');
-  const res=await apiFetch(API_BASE+'/videos',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},'Video Task',4);
+  const res=await apiFetch(API_BASE+'/videos',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},'Video Task',40); // 503 "video_queue_full" fréquent en gratuit : on patiente
   const data=await res.json();
   const compositeId=data.video_id||data.id||data.task_id;
   if(!compositeId)throw new Error('Pas de video_id');
