@@ -434,8 +434,10 @@ function revealSection(id){const el=document.getElementById(id);if(!el)return;el
 // ══════════════════════════════════════════════════════════════════
 // MULTI-CLÉS API
 // ══════════════════════════════════════════════════════════════════
-function getStoredKeys(){try{const raw=localStorage.getItem(API_KEYS_STORAGE);if(!raw)return[];const arr=JSON.parse(raw);if(!Array.isArray(arr))return[];return arr.filter(k=>typeof k==='string'&&k.trim().length>0)}catch(e){return[]}}
-function setStoredKeys(keys){try{localStorage.setItem(API_KEYS_STORAGE,JSON.stringify(keys))}catch(e){}}
+// Copie en mémoire : certains aperçus (appli mobile, iframe) bloquent localStorage
+let memoryKeys=null;
+function getStoredKeys(){if(memoryKeys)return memoryKeys.slice();try{const raw=localStorage.getItem(API_KEYS_STORAGE);if(!raw)return[];const arr=JSON.parse(raw);if(!Array.isArray(arr))return[];return arr.filter(k=>typeof k==='string'&&k.trim().length>0)}catch(e){return[]}}
+function setStoredKeys(keys){memoryKeys=keys.slice();try{localStorage.setItem(API_KEYS_STORAGE,JSON.stringify(keys))}catch(e){debugLog('warn','CLÉS','Stockage navigateur indisponible : clés gardées pour cette session seulement')}}
 function refreshKeyPool(){const stored=getStoredKeys();const old=state.keyPool||[];state.keyPool=stored.map(k=>{const ex=old.find(p=>p.key===k);return ex||{key:k,lastUsed:0,cooldownUntil:0,active:true,errorCount:0}})}
 function hasActiveKey(){return state.keyPool.some(k=>k.active)}
 function getReadyKey(){const now=Date.now();const active=state.keyPool.filter(k=>k.active);if(active.length===0)return{key:null,waitMs:0};const ready=active.filter(k=>!k.cooldownUntil||k.cooldownUntil<=now);if(ready.length===0){const soonest=active.reduce((a,b)=>(a.cooldownUntil||0)<(b.cooldownUntil||0)?a:b);return{key:null,waitMs:Math.max(1000,(soonest.cooldownUntil||0)-now)}}ready.sort((a,b)=>(a.lastUsed||0)-(b.lastUsed||0));return{key:ready[0],waitMs:0}}
