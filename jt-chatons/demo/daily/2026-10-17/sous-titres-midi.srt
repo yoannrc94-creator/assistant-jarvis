@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:03,077
+Dimanche 25 octobre, on recule d'une heure.
+
+2
+00:00:03,127 --> 00:00:04,938
+À 3 heures, il sera 2 heures.
+
+3
+00:00:04,988 --> 00:00:06,502
+Une heure de sommeil gagnée.
+
+4
+00:00:06,552 --> 00:00:07,932
+Date la plus précoce possible.
+
+5
+00:00:07,982 --> 00:00:09,760
+Le dernier dimanche d'octobre.
+
+6
+00:00:09,810 --> 00:00:11,201
+Les téléphones changent seuls.
+
+7
+00:00:11,251 --> 00:00:12,788
+Pas le four ni le micro-ondes.
+
+8
+00:00:12,839 --> 00:00:13,692
+Pense à la voiture.
+
+9
+00:00:13,742 --> 00:00:14,591
+Et au vieux réveil.
+
+10
+00:00:14,641 --> 00:00:15,826
+Tu l'avais noté ?
+

@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:02,088
+Mobilisation prévue samedi.
+
+2
+00:00:02,138 --> 00:00:04,351
+Des gilets jaunes veulent se retrouver.
+
+3
+00:00:04,401 --> 00:00:06,062
+Les transports, touchés ?
+
+4
+00:00:06,112 --> 00:00:08,168
+La SNCF n'a pas d'information.
+
+5
+00:00:08,218 --> 00:00:10,670
+La RATP ne peut rien prévoir.
+
+6
+00:00:10,720 --> 00:00:12,650
+Aucune grève nationale confirmée.
+
+7
+00:00:12,700 --> 00:00:14,551
+Les avions devraient décoller.
+
+8
+00:00:14,602 --> 00:00:16,481
+Les tendances arrivent la veille.
+
+9
+00:00:16,531 --> 00:00:17,754
+Vérifie tes horaires.
+
+10
+00:00:17,804 --> 00:00:19,828
+Le train ? Mets un chat.
+

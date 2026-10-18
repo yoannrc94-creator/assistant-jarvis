@@ -1,0 +1,79 @@
+{
+ "date": "2026-10-17",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "slot": "midi",
+ "couleur": "#2a9d8f",
+ "source": "Journal du Geek, Journal du Net",
+ "hook1": "Heure d'hiver le 25 octobre",
+ "hook2": "On recule d'une heure",
+ "fin_voix": "Abonne-toi, prochain JT à 18 heures 30 !",
+ "fin_sous_titre": "Prochain JT à 18h30",
+ "description": "Dimanche 25 octobre à 3 heures, il sera 2 heures. Les téléphones changent seuls, pas le four ni la voiture. Tu l'avais noté ? Un émoji suffit 👇\n#changementdheure #heuredhiver #astuce #actu #quotidien",
+ "segments": [
+  {
+   "text": "Dimanche 25 octobre, on recule d'une heure.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft teal backdrop"
+  },
+  {
+   "text": "À 3 heures, il sera 2 heures.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "turning the hands of a large wall clock backward with one paw",
+   "bg": "a cozy living room at night with a big wall clock"
+  },
+  {
+   "text": "Une heure de sommeil gagnée.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "sleeping peacefully under a blanket, then stretching happily",
+   "bg": "a calm bedroom at night with soft lamp light"
+  },
+  {
+   "text": "Date la plus précoce possible.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "pointing at a large calendar page with the number 25 circled",
+   "bg": "a modern news studio with a large screen showing a calendar"
+  },
+  {
+   "text": "Le dernier dimanche d'octobre.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "flipping the pages of a desk calendar",
+   "bg": "a news desk with autumn leaves on it"
+  },
+  {
+   "text": "Les téléphones changent seuls.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "showing a smartphone screen to the camera, the clock changing",
+   "bg": "a bright kitchen in the morning"
+  },
+  {
+   "text": "Pas le four ni le micro-ondes.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "pressing buttons on an oven clock with a puzzled look",
+   "bg": "a modern kitchen with an oven and a microwave"
+  },
+  {
+   "text": "Pense à la voiture.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "sitting in a car and adjusting the dashboard clock",
+   "bg": "inside a car parked on a quiet street"
+  },
+  {
+   "text": "Et au vieux réveil.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "picking up an old alarm clock and turning its knob",
+   "bg": "a bedside table with an old alarm clock"
+  },
+  {
+   "text": "Tu l'avais noté ?",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft teal backdrop"
+  }
+ ]
+}

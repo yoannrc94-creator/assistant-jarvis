@@ -1,0 +1,7 @@
+# Jamais de clés ni de journaux dans le dépôt
+.*_key
+*.key
+.env
+*.log
+log-*.txt
+__pycache__/

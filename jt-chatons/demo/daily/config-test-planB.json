@@ -1,0 +1,24 @@
+{
+ "date": "2026-10-14",
+ "slot": "bonus",
+ "party": "rn",
+ "video_minutes": 0,
+ "clip_seconds": 10,
+ "hooks_candidats": [
+  "Marine Le Pen veut moins payer pour l'Europe",
+  "La France paie moins à l'UE, promet le RN",
+  "Des chiffres flous sur le budget européen",
+  "Moins de contribution à l'UE, ça coûte combien ?",
+  "Bruxelles, la facture que le RN veut réduire",
+  "Marine Le Pen, l'Europe et l'addition"
+ ],
+ "hook1": "Marine Le Pen veut moins payer l'UE",
+ "hook2": "Gaspard a regardé les chiffres",
+ "text": "Marine Le Pen veut réduire la contribution de la France à l'Union européenne. Un : moins payer pour le budget de l'UE. Deux : Le Monde pointe des chiffres flous sur ce plan. Et toi, tu y crois ?",
+ "reaction": "Gaspard, lui, préfère garder ses croquettes en France.",
+ "question": "Tu y crois ? Mets un chat en commentaire. Contre ? Mets une croix.",
+ "source": "Les Echos, Le Monde",
+ "bg": "a bright European-style meeting room with blue flags and a long table covered with folders and a small golden calculator, warm morning light, no text, no writing",
+ "accessory": "a tiny blue and gold tie clipped to its collar",
+ "description": "Marine Le Pen veut réduire la contribution de la France à l'UE 🇪🇺🐱 Le Monde pointe des chiffres flous sur ce plan. Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #europe #presidentielle2027 #rn"
+}

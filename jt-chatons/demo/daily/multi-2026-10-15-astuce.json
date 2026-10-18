@@ -1,0 +1,87 @@
+{
+ "date": "2026-10-15",
+ "slot": "astuce",
+ "party": "jt",
+ "source": "usage courant",
+ "clip_seconds": 4,
+ "hook1": "Un bocal qui résiste ?",
+ "hook2": "Une astuce simple",
+ "reaction": "",
+ "question": "",
+ "description": "Un bocal qui ne s'ouvre pas ? Une astuce simple 🐱 Tu la connaissais ? Dis-le en commentaire 👇\n#astuce #viepratique #astucequotidienne #maison #conseil",
+ "segments": [
+  {
+   "text": "Un bocal qui ne s'ouvre pas ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "accessory": "a tiny dark tie",
+   "bg": "a bright modern kitchen with a wooden table and a row of glass jars on a shelf, no people, no text, no writing",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence, small nod"
+  },
+  {
+   "text": "Le chat a tout essayé.",
+   "subject": "a realistic white kitten in a light blue cardigan, curious and determined expression, ",
+   "bg": "a bright modern kitchen with a wooden table and a glass jar on it, no people, no text, no writing",
+   "action": "gripping a glass jar with both paws and twisting hard, face tense with effort, whiskers pushed back"
+  },
+  {
+   "text": "Prenez un élastique.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "accessory": "a tiny dark tie",
+   "bg": "a bright modern kitchen with a wooden table, no people, no text, no writing",
+   "action": "holding up a red rubber band between two paws, looking at the camera, explaining with a calm gesture"
+  },
+  {
+   "text": "Enroulez-le autour du couvercle.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "accessory": "a tiny dark tie",
+   "bg": "a bright modern kitchen counter with a glass jar in the centre, close-up, no people, no text, no writing",
+   "action": "placing the red rubber band around the lid of the glass jar with careful paws"
+  },
+  {
+   "text": "La prise devient bien meilleure.",
+   "subject": "a realistic white kitten in a light blue cardigan, curious and determined expression, ",
+   "bg": "a bright modern kitchen with a wooden table and a glass jar, no people, no text, no writing",
+   "action": "twisting the lid of the jar wrapped in a red rubber band, the lid turning easily, a surprised and happy expression"
+  },
+  {
+   "text": "Le couvercle se dévisse enfin.",
+   "subject": "a realistic white kitten in a light blue cardigan, curious and determined expression, ",
+   "bg": "a sunny kitchen window with a jar of honey on the table, golden light, no people, no text, no writing",
+   "action": "lifting the open jar in both paws, proud triumphant look, looking up at the camera"
+  },
+  {
+   "text": "Son copain, lui, attend qu'on ouvre.",
+   "subject": "a realistic black and white tuxedo kitten, playful and mischievous expression, ",
+   "bg": "a bright modern kitchen with a wooden table and a glass jar, no people, no text, no writing",
+   "action": "sitting next to the glass jar, staring at it with big round eyes, tail wrapped around its paws"
+  },
+  {
+   "text": "Puis il prend tout le mérite.",
+   "subject": "a realistic black and white tuxedo kitten, playful and mischievous expression, ",
+   "bg": "a bright modern kitchen with a wooden table and an open glass jar, no people, no text, no writing",
+   "action": "sitting proudly beside the open jar with one paw raised, smug expression, looking at the camera"
+  },
+  {
+   "text": "Tu connaissais cette astuce ? Dis-le en commentaire !",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "accessory": "a tiny dark tie",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing with both paws open, looking straight into the camera, eyebrows raised"
+  }
+ ],
+ "fin_voix": "Abonne-toi pour la prochaine astuce !",
+ "fin_cache": "gem_signature_astuce.wav",
+ "fin_sous_titre": "Une astuce du quotidien chaque jour",
+ "voix_existante": "/tmp/claude-0/-home-user-assistant-jarvis/45b2ce9a-ba2b-5f9f-98c9-bdcc4dc5d6fd/scratchpad/demo/tk_voice900.wav",
+ "debuts": [
+  0.0,
+  2.717,
+  4.138,
+  5.799,
+  8.236,
+  10.223,
+  12.282,
+  14.834,
+  16.567
+ ]
+}

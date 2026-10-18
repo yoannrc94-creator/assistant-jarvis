@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:02,389
+Les baux de location changent.
+
+2
+00:00:02,439 --> 00:00:04,427
+De nouveaux contrats s'appliquent.
+
+3
+00:00:04,477 --> 00:00:06,818
+Ils concernent les résidences principales.
+
+4
+00:00:06,868 --> 00:00:08,595
+Un champ pour le portable.
+
+5
+00:00:08,645 --> 00:00:10,295
+Il est ajouté au contrat type.
+
+6
+00:00:10,345 --> 00:00:12,787
+Bailleurs et locataires sont concernés.
+
+7
+00:00:12,837 --> 00:00:14,432
+Relisez avant de signer.
+
+8
+00:00:14,482 --> 00:00:16,059
+Lisez-le en entier.
+
+9
+00:00:16,109 --> 00:00:18,102
+Le reporter a lu le modèle.
+
+10
+00:00:18,152 --> 00:00:20,559
+Locataire ? Mets un chat.
+

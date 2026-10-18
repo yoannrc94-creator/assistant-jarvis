@@ -1,0 +1,89 @@
+{
+ "date": "2026-10-15",
+ "slot": "soir",
+ "party": "jt",
+ "source": "Les Echos",
+ "clip_seconds": 4,
+ "hook1": "Stop à la vie à crédit ?",
+ "hook2": "Attal écrit aux Français",
+ "reaction": "",
+ "question": "",
+ "description": "« La France doit arrêter de vivre à crédit » : la lettre de Gabriel Attal aux Français ✉️🐱 Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #dette #presidentielle2027 #actu2027",
+ "segments": [
+  {
+   "text": "Attal écrit aux Français.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a modern news studio with a blue backdrop and a small desk, no people, no text, no writing",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence, small nod",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "La France doit arrêter de vivre à crédit.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a wide grand parliament hall with green benches and tall windows, no people in focus, no text, no writing",
+   "action": "turning slightly toward a large screen, presenting with one paw, calm serious face",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "C'est sa lettre aux électeurs.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "an old post office hall with wooden counters and brass lamps, no people, no text, no writing",
+   "action": "holding an envelope up toward the camera with a proud look",
+   "accessory": "a beige press vest"
+  },
+  {
+   "text": "La dette revient dans le débat.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a grand library with tall wooden shelves and a big window, golden light, no people, no text, no writing",
+   "action": "stacking shiny coins into a wobbling tower, carefully, one by one",
+   "accessory": "a small blue scarf"
+  },
+  {
+   "text": "Notre reporter a lu la lettre.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a sunny French village street with a yellow mailbox and flower pots, no people, no text, no writing",
+   "action": "reading a letter with round glasses perched on its nose, then shaking its head slowly",
+   "accessory": "a beige press vest"
+  },
+  {
+   "text": "Un chat, lui, vit à crédit.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a cozy kitchen with a wooden table and a bowl of kibble, warm light, no people, no text, no writing",
+   "action": "sitting by an empty bowl with a guilty look, paws crossed",
+   "accessory": "a small blue scarf"
+  },
+  {
+   "text": "Un chat a fait le calcul.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a sunny French café terrace with a small table, no people, no text, no writing",
+   "action": "shaking head slowly while stirring a small cup of milk",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Ça concerne tous les contribuables.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a stone square in France with tricolor flags fluttering, no text, no writing",
+   "action": "pointing with the microphone toward the flags, then looking at the camera",
+   "accessory": "a beige press vest"
+  },
+  {
+   "text": "Pour ou contre ? Mets un chat.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing with both paws open, looking straight into the camera, eyebrows raised",
+   "accessory": "a tiny dark tie"
+  }
+ ],
+ "voix_existante": "/tmp/claude-0/-home-user-assistant-jarvis/45b2ce9a-ba2b-5f9f-98c9-bdcc4dc5d6fd/scratchpad/demo/tk_voice900.wav",
+ "debuts": [
+  0.2,
+  2.45,
+  5.09,
+  6.92,
+  8.84,
+  10.76,
+  13.22,
+  14.76,
+  17.08
+ ]
+}

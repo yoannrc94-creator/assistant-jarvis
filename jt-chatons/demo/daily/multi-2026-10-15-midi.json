@@ -1,0 +1,48 @@
+{
+ "date": "2026-10-15",
+ "clip_seconds": 6,
+ "source": "BFMTV, Le Parisien, Les Echos",
+ "slot": "midi",
+ "party": "rn",
+ "hook1": "Le Pen : l'Ukraine, six mois",
+ "hook2": "Gaspard a lancé le sablier",
+ "description": "Marine Le Pen promet de maintenir l'aide à l'Ukraine six mois si elle est élue ⏳🐱 Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #ukraine #marinelepen #presidentielle2027",
+ "segments": [
+  {
+   "text": "Six mois, pas un de plus.",
+   "bg": "a sunny paved square in front of a modern glass building with blue flags, no people, no text, no writing",
+   "action": "placing a giant hourglass on a pedestal, pushing it gently to start the sand running",
+   "accessory": "a navy blue scarf and small work gloves"
+  },
+  {
+   "text": "Si elle est élue, l'aide à l'Ukraine durerait six mois.",
+   "bg": "a wide warehouse loading dock with wooden crates stacked high and a blue and yellow ribbon, no people, no text, no writing",
+   "action": "rolling a crate toward a truck while looking back over its shoulder",
+   "accessory": "a navy blue scarf"
+  },
+  {
+   "text": "Ensuite, elle la couperait : plus les moyens, dit-elle.",
+   "bg": "a dusty old warehouse with empty wooden shelves and a single bare lightbulb, no people, no text, no writing",
+   "action": "shaking an empty wallet upside down while a few coins drop out",
+   "accessory": "a navy blue scarf"
+  },
+  {
+   "text": "Pour certains, la facture irait vers l'Europe.",
+   "bg": "a wide avenue in Brussels with European flags and a tall glass building, no people, no text, no writing",
+   "action": "dragging a heavy suitcase toward a tall pile of other suitcases marked with blue stars",
+   "accessory": "a tiny blue and gold tie"
+  },
+  {
+   "text": "Gaspard, lui, arrête ses croquettes après six minutes.",
+   "bg": "a cozy kitchen with a wooden table and a bowl of kibble, warm light, no people, no text, no writing",
+   "action": "stopping in front of an empty kibble bowl with a dramatic sigh, paws on its hips",
+   "accessory": "a navy blue apron"
+  },
+  {
+   "text": "Tu y crois ? Mets un chat. Contre ? Mets une croix.",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing on the stage with both paws open, looking straight at the camera as if asking a question",
+   "accessory": "a small navy bow tie"
+  }
+ ]
+}

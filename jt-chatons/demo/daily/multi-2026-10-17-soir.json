@@ -1,0 +1,80 @@
+{
+ "date": "2026-10-17",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "slot": "soir",
+ "couleur": "#7b5ea7",
+ "source": "Service public, Paris.fr",
+ "hook1": "Expulsions suspendues dès le 1er novembre",
+ "hook2": "Jusqu'au 31 mars 2027",
+ "fin_voix": "Abonne-toi, prochain JT demain à 7 heures 30 !",
+ "fin_sous_titre": "Prochain JT demain à 7h30",
+ "description": "La trêve hivernale commence le 1er novembre. Les expulsions locatives sont suspendues jusqu'au 31 mars 2027, mais les loyers restent dus. Tu le savais ? Un émoji suffit 👇\n#logement #location #treve #locataire #actu",
+ "segments": [
+  {
+   "text": "Trêve hivernale le 1er novembre.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft purple backdrop"
+  },
+  {
+   "text": "Les expulsions locatives sont suspendues.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "placing a paw on a closed apartment door key on the desk",
+   "bg": "a news desk in a plain studio with a small model house and a set of keys, plain grey wall, no flags, no text"
+  },
+  {
+   "text": "Jusqu'au 31 mars 2027.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "pointing at a calendar showing March",
+   "bg": "a modern news studio with a large screen showing a calendar"
+  },
+  {
+   "text": "Même si un juge l'a décidé.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "standing in front of a courthouse, speaking into the microphone",
+   "bg": "the steps of a stone courthouse on a grey day"
+  },
+  {
+   "text": "Mais les loyers restent dus.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "counting coins on a kitchen table next to an envelope",
+   "bg": "a small kitchen table with an envelope and coins"
+  },
+  {
+   "text": "La dette ne disparaît pas.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "reading a sheet of paper with a thoughtful expression",
+   "bg": "a modest French living room with a window and rain outside, no money, no text"
+  },
+  {
+   "text": "Les squatteurs ne sont pas protégés.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "speaking into the microphone in front of an apartment building",
+   "bg": "a city street with apartment buildings in winter"
+  },
+  {
+   "text": "Une exception existe avec un relogement.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "holding a key toward the camera",
+   "bg": "an entrance hall of a new apartment building"
+  },
+  {
+   "text": "Le reporter a vérifié.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "reading an official document, then nodding",
+   "bg": "a quiet office with folders on shelves"
+  },
+  {
+   "text": "Tu le savais ?",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft purple backdrop"
+  }
+ ],
+ "voix_brute_gardee": true
+}

@@ -1,0 +1,80 @@
+{
+ "date": "2026-10-17",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "sans_secours": true,
+ "reaction": "",
+ "question": "",
+ "couleur": "#e5b93c",
+ "source": "Service public, impots.gouv, Le Revenu, Meilleurtaux",
+ "hook1": "Taxe foncière en dix fois",
+ "hook2": "Prélevée de janvier à octobre",
+ "fin_voix": "Abonne-toi pour le prochain JT !",
+ "fin_sous_titre": "Un JT des chatons chaque jour",
+ "description": "Avec la mensualisation, la taxe foncière se paie en dix mensualités, généralement prélevées le 15 de chaque mois. Tu étales déjà ta taxe ? Un émoji suffit 👇\n#taxefonciere #impots #budget #vieapratique #argent",
+ "segments": [
+  {
+   "text": "Tu peux étaler ta taxe foncière.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Elle est prélevée en dix mensualités.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a paper calendar with the number 15 circled",
+   "bg": "a news desk with a paper wall calendar"
+  },
+  {
+   "text": "Généralement le 15, de janvier à octobre.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding an envelope toward the camera",
+   "bg": "a bright kitchen table with papers and a cup of tea"
+  },
+  {
+   "text": "Il faut t'inscrire avant la date limite.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "tapping a smartphone with one paw",
+   "bg": "a quiet office with folders on shelves"
+  },
+  {
+   "text": "L'inscription se fait sur le site des impôts.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "looking at a paper bill with a thoughtful expression",
+   "bg": "a calm living room with a window and autumn light"
+  },
+  {
+   "text": "Ou par téléphone.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a paper calendar with the number 15 circled",
+   "bg": "a close-up of a laptop screen on a desk"
+  },
+  {
+   "text": "Un retard peut coûter cher.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding an envelope toward the camera",
+   "bg": "a quiet street with trees in autumn"
+  },
+  {
+   "text": "Ça évite le stress des dates limites.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "tapping a smartphone with one paw",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Les dates changent chaque année.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "looking at a paper bill with a thoughtful expression",
+   "bg": "a news desk with a paper wall calendar"
+  },
+  {
+   "text": "Tu étales déjà ta taxe foncière ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a bright kitchen table with papers and a cup of tea"
+  }
+ ],
+ "slot": "reserve-tf"
+}

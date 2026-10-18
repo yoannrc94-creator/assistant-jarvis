@@ -1,0 +1,74 @@
+{
+ "date": "2026-10-18",
+ "slot": "midi",
+ "party": "jt",
+ "source": "impots.gouv.fr, Clubic, Selectra",
+ "couleur": "#2a9d8f",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "hook1": "Aide carburant : 100 euros de plus",
+ "hook2": "Pour les grands rouleurs",
+ "fin_voix": "Abonne-toi, prochain JT à 18 heures 30 !",
+ "fin_sous_titre": "Prochain JT à 18h30",
+ "description": "L'aide carburant de 100 euros est prolongée pour les grands rouleurs. Tu en as déjà profité ? Un émoji suffit 👇\n#jtdeschatons #actu #viepratique #carburant #aide",
+ "segments": [
+  {
+   "text": "L'aide carburant de 100 euros est élargie.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft teal backdrop, no people, no text, no flags"
+  },
+  {
+   "text": "Elle concerne les grands rouleurs.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "raising two paws, a serious and friendly expression",
+   "bg": "a modern news studio with a soft teal backdrop, no people, no text, no flags"
+  },
+  {
+   "text": "Elle est prolongée jusqu'à la fin de l'année.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "tapping a paper calendar on the desk with one paw",
+   "bg": "a news desk with a paper calendar, no people"
+  },
+  {
+   "text": "Les nouveaux bénéficiaires doivent faire une demande.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "holding a printed form toward the camera with one paw",
+   "bg": "a news desk with a printed form, no people"
+  },
+  {
+   "text": "La demande se fait sur impots.gouv.fr.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "pointing at a laptop screen on the desk",
+   "bg": "a news desk with a laptop, no people"
+  },
+  {
+   "text": "Vérifie ton éligibilité avant de demander.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "holding a magnifying glass over a paper",
+   "bg": "a news desk with papers, no people"
+  },
+  {
+   "text": "Méfie-toi des sites intermédiaires.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "raising one paw toward the camera, a stern expression, sitting still",
+   "bg": "a plain soft teal studio wall, no objects, no people, no text, no symbols"
+  },
+  {
+   "text": "Seul impots.gouv.fr est officiel.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "placing one paw on a desk, standing firm",
+   "bg": "a news desk with a government style blue banner, no people, no text"
+  },
+  {
+   "text": "Tu en as déjà profité ?",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft teal backdrop, no people, no text, no flags"
+  }
+ ],
+ "voix_brute_gardee": true
+}

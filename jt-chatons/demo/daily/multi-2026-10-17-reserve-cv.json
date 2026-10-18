@@ -1,0 +1,80 @@
+{
+ "date": "2026-10-17",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "sans_secours": true,
+ "reaction": "",
+ "question": "",
+ "couleur": "#e5b93c",
+ "source": "Ameli, Service public, France Mutuelle",
+ "hook1": "Carte Vitale : mise à jour",
+ "hook2": "Une fois par an, au minimum",
+ "fin_voix": "Abonne-toi pour le prochain JT !",
+ "fin_sous_titre": "Un JT des chatons chaque jour",
+ "description": "Ta carte Vitale doit être mise à jour au moins une fois par an, et à chaque changement de situation. Tu l'as fait cette année ? Un émoji suffit 👇\n#carte #vitale #remboursement #sante #vieapratique",
+ "segments": [
+  {
+   "text": "Ta carte Vitale doit être mise à jour.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Au moins une fois par an.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a blue health card on the desk with one paw",
+   "bg": "a news desk with a paper wall calendar"
+  },
+  {
+   "text": "Et à chaque changement de situation.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding a smartphone toward the camera",
+   "bg": "a bright kitchen table with papers and a cup of tea"
+  },
+  {
+   "text": "Déménagement, naissance, nouvelle activité.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "tapping a calendar date with one paw",
+   "bg": "a quiet office with folders on shelves"
+  },
+  {
+   "text": "Elle n'a pas de date de validité.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "looking at the camera with a calm smile",
+   "bg": "a calm living room with a window and autumn light"
+  },
+  {
+   "text": "Elle sert à tes remboursements.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a blue health card on the desk with one paw",
+   "bg": "a close-up of a laptop screen on a desk"
+  },
+  {
+   "text": "Ça se fait sur ameli.fr ou dans l'appli.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding a smartphone toward the camera",
+   "bg": "a quiet street with trees in autumn"
+  },
+  {
+   "text": "Choisis une date fixe pour y penser.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "tapping a calendar date with one paw",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Un rappel suffit.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "looking at the camera with a calm smile",
+   "bg": "a news desk with a paper wall calendar"
+  },
+  {
+   "text": "Tu l'as mise à jour cette année ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a bright kitchen table with papers and a cup of tea"
+  }
+ ],
+ "slot": "reserve-cv"
+}

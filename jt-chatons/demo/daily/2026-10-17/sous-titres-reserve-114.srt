@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:02,596
+Le 114 sert aux personnes sourdes.
+
+2
+00:00:02,646 --> 00:00:04,656
+C'est un numéro d'urgence gratuit.
+
+3
+00:00:04,706 --> 00:00:05,950
+Il marche jour et nuit.
+
+4
+00:00:06,000 --> 00:00:07,991
+Par SMS, tchat ou visio.
+
+5
+00:00:08,041 --> 00:00:09,683
+Pour les malentendants aussi.
+
+6
+00:00:09,733 --> 00:00:12,202
+Des agents préviennent les secours.
+
+7
+00:00:12,252 --> 00:00:13,630
+Samu, pompiers ou gendarmes.
+
+8
+00:00:13,680 --> 00:00:15,262
+Partage-le à un proche concerné.
+
+9
+00:00:15,312 --> 00:00:16,657
+Le reporter a vérifié.
+
+10
+00:00:16,707 --> 00:00:17,892
+Tu le connaissais ?
+

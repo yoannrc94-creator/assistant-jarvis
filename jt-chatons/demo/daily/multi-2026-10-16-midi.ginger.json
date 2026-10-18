@@ -1,0 +1,95 @@
+{
+ "date": "2026-10-16",
+ "slot": "midi",
+ "party": "jt",
+ "source": "Libération, Le Parisien",
+ "clip_seconds": 4,
+ "hook1": "Retraités : les députés disent non",
+ "hook2": "L'abattement de 10 % en question",
+ "reaction": "",
+ "question": "",
+ "description": "Retraités : les députés disent non à la baisse de l'abattement. Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#retraite #impots #budget2027 #actu #argent",
+ "segments": [
+  {
+   "text": "Retraités, l'abattement est en jeu.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright modern living room with a wooden table and a folded newspaper, no people, no text, no writing",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence, small nod",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Le budget veut plafonner.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a grand parliament hall with green benches and tall windows, no people, no text, no writing",
+   "action": "holding a microphone, turning toward the benches, serious face"
+  },
+  {
+   "text": "Plafond actuel : 4 439 euros.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright kitchen table with a neat stack of papers and a calculator, no people, no text, no writing",
+   "action": "tapping a calculator with one paw, focused look",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Il le ramène à 3 000 euros.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a bright kitchen table with a small stack of coins, no people, no text, no writing",
+   "action": "pushing one coin across the table, serious look"
+  },
+  {
+   "text": "Les députés ont voté contre.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a grand parliament hall with green benches, tall windows, no people, no text, no writing",
+   "action": "raising one paw in front of a large window, firm expression",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Une majorité s'y oppose.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a grand parliament hall with green benches and tall windows, no people, no text, no writing",
+   "action": "holding a microphone, nodding with a satisfied look"
+  },
+  {
+   "text": "Le budget n'est pas adopté.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a stone square in France with tricolor flags fluttering, no people, no text, no writing",
+   "action": "standing with one paw raised, calm expression"
+  },
+  {
+   "text": "Le débat continue.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a quiet wooden library with tall shelves and golden light, no people, no text, no writing",
+   "action": "reading a closed folder, calm curious look",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Vérifiez votre avis.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a bright kitchen table with a closed envelope, no people, no text, no writing",
+   "action": "sliding the envelope toward the camera, friendly look"
+  },
+  {
+   "text": "Retraité ? Mets un chat.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing with both paws open, looking straight into the camera, eyebrows raised",
+   "accessory": "a tiny dark tie"
+  }
+ ],
+ "fin_voix": "C'était le JT des chatons.",
+ "fin_cache": "gem_signature_jt_court.wav",
+ "voix_existante": "/tmp/claude-0/-home-user-assistant-jarvis/45b2ce9a-ba2b-5f9f-98c9-bdcc4dc5d6fd/scratchpad/demo/tk_par-2026-10-16-midi.wav",
+ "debuts": [
+  0.0,
+  2.375,
+  4.054,
+  8.101,
+  10.103,
+  12.013,
+  13.83,
+  15.556,
+  17.004,
+  18.409
+ ],
+ "couleur": "#2a9d8f"
+}

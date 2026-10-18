@@ -1,0 +1,24 @@
+{
+ "date": "2026-10-13",
+ "slot": "soir",
+ "party": "rn",
+ "video_minutes": 60,
+ "clip_seconds": 10,
+ "hooks_candidats": [
+  "Un ministère rien que pour les enfants !",
+  "Les départements, c'est fini pour l'enfance ?",
+  "Marine Le Pen promet un ministère",
+  "L'enfance, grande cause nationale en 2027 ?",
+  "L'État reprendrait la main sur l'aide à l'enfance",
+  "Un nouveau ministère si elle est élue"
+ ],
+ "hook1": "Marine Le Pen promet un ministère",
+ "hook2": "Gaspard t'explique, en soupirant",
+ "text": "Un ministère rien que pour les enfants ! Promesse de Marine Le Pen. Un : l'État reprendrait la protection de l'enfance aux départements. Deux : elle en ferait une grande cause nationale.",
+ "reaction": "Gaspard veut aussi un ministère de la sieste.",
+ "question": "Et toi, bonne idée ou pas ? Dis-le en commentaire !",
+ "source": "ici Occitanie, Le Figaro, Radio Totem",
+ "bg": "a cozy colorful children's playroom with soft toys, building blocks and crayon drawings of houses and suns on the walls, warm afternoon light, no text, no writing",
+ "accessory": "a small fluffy teddy bear tucked under its free arm",
+ "description": "Un ministère de plein exercice pour la protection de l'enfance : la promesse de Marine Le Pen 🧸🐱 À Moissac, la candidate RN veut que l'État reprenne la main sur les départements et en faire une grande cause nationale. Bonne idée ou pas ? 👇\n#actu #politique #marinelepen #enfance #presidentielle2027"
+}

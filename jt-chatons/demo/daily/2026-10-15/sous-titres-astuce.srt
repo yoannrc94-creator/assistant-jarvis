@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:02,817
+Un bocal qui ne s'ouvre pas ?
+
+2
+00:00:02,867 --> 00:00:04,238
+Le chat a tout essayé.
+
+3
+00:00:04,288 --> 00:00:05,899
+Prenez un élastique.
+
+4
+00:00:05,949 --> 00:00:08,336
+Enroulez-le autour du couvercle.
+
+5
+00:00:08,386 --> 00:00:10,323
+La prise devient bien meilleure.
+
+6
+00:00:10,373 --> 00:00:12,382
+Le couvercle se dévisse enfin.
+
+7
+00:00:12,432 --> 00:00:14,934
+Son copain, lui, attend qu'on ouvre.
+
+8
+00:00:14,984 --> 00:00:16,667
+Puis il prend tout le mérite.
+
+9
+00:00:16,717 --> 00:00:20,012
+Tu connaissais cette astuce ? Dis-le en commentaire !
+

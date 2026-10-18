@@ -1,0 +1,49 @@
+{
+ "date": "2026-10-15",
+ "clip_seconds": 6,
+ "source": "BFMTV, Le Parisien, Les Echos",
+ "slot": "soir",
+ "party": "ren",
+ "hook1": "Attal : stop à la vie à crédit ?",
+ "hook2": "Mandarine a posté la lettre",
+ "description": "« La France doit arrêter de vivre à crédit » : la lettre de Gabriel Attal aux Français ✉️🐱 Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #dette #attal #presidentielle2027",
+ "segments": [
+  {
+   "text": "La France doit arrêter de vivre à crédit.",
+   "bg": "a warm blurred French village street with soft sunlight, no people, no text, no writing",
+   "action": "extreme close-up of its face speaking straight to the camera, mouth open mid-sentence, eyes wide, one paw raised toward the camera, background softly blurred",
+   "accessory": "an orange messenger bag"
+  },
+  {
+   "text": "C'est la lettre de Gabriel Attal aux Français.",
+   "bg": "a cozy kitchen table at dusk with a warm lamp and a stack of envelopes, no people, no text, no writing",
+   "action": "reading a letter with round glasses perched on its nose, then shaking its head slowly",
+   "accessory": "round glasses"
+  },
+  {
+   "text": "Il écrit aux électeurs pour alerter sur la dette.",
+   "bg": "a grand stone post office hall with tall windows and a row of wooden counters, no people, no text, no writing",
+   "action": "carrying a tall stack of letters toward a counter, wobbling under the weight",
+   "accessory": "an orange messenger bag"
+  },
+  {
+   "text": "La dette revient dans le débat présidentiel, selon Les Echos.",
+   "bg": "a grand library with tall wooden shelves and a big window, golden light, no people, no text, no writing",
+   "action": "stacking shiny coins into a wobbling tower, carefully, one by one",
+   "accessory": "a small brown beret"
+  },
+  {
+   "text": "Mandarine, elle, vit à crédit de croquettes.",
+   "bg": "a cozy café corner with a wooden table and a small bowl of kibble, warm light, no people, no text, no writing",
+   "action": "nibbling from a small bowl and then holding up an empty spoon with a guilty look",
+   "accessory": "a tiny red apron"
+  },
+  {
+   "text": "Tu es pour ? Mets un chat. Contre ? Mets une croix.",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing on the stage with both paws open, looking straight at the camera as if asking a question",
+   "accessory": "a small orange bow tie"
+  }
+ ],
+ "gstyle": "reporter posée et calme, voix claire, débit normal, pas pressée, ton pince-sans-rire"
+}

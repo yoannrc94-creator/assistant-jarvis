@@ -1,0 +1,6 @@
+À 2 heures 35 (14 octobre), après la voix Gemini et l'histoire 2 :
+1) Premier micro-trottoir « L'astuce politique » sur l'amendement (story/astuce1.py) : accroche 1 « Qui peut réécrire une loi ? Pas que le gouvernement. » (à valider par l'utilisateur).
+2) Personnage original Noisette, chipmunk roux, imperméable jaune moutarde, badge de presse « Noisette, reporter de terrain ». Pas de ressemblance avec Alvin et les Chipmunks.
+3) Décor qui bouge (marché, ballons, feuilles), caméra à l'épaule, zoom à chaque question.
+4) Les chats reporters corrigent les réponses de Noisette. Aucune vraie personne. Aucune prise de parti.
+Limite : quota hebdomadaire Claude à 22 % restant : générer les images avec parcimonie.

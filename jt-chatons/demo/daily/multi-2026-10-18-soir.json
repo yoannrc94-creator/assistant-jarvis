@@ -1,0 +1,74 @@
+{
+ "date": "2026-10-18",
+ "slot": "soir",
+ "party": "jt",
+ "source": "CRE, Jechange, Lelynx",
+ "couleur": "#7b5ea7",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "hook1": "Gaz : +6,3 % en octobre",
+ "hook2": "Selon la CRE",
+ "fin_voix": "Abonne-toi, prochain JT demain à 7 heures 30 !",
+ "fin_sous_titre": "Prochain JT demain à 7h30",
+ "description": "Le prix repère du gaz augmente de 6,3 % en octobre, selon la CRE. Tu es en contrat à prix fixe ? Un émoji suffit 👇\n#jtdeschatons #actu #viepratique #gaz #energie",
+ "segments": [
+  {
+   "text": "Le gaz augmente de 6,3 % en octobre.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft purple backdrop, no people, no text, no flags"
+  },
+  {
+   "text": "C'est le prix repère publié par la CRE.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "pointing at a small paper chart on the desk with one paw",
+   "bg": "a news desk with a small paper chart, no people, no text"
+  },
+  {
+   "text": "Pour les offres indexées, environ 5 euros de plus.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "tapping a calculator on the desk",
+   "bg": "a news desk with a calculator and papers, no people"
+  },
+  {
+   "text": "Par mois, selon les estimations de la CRE.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "nodding, holding a pen above the notebook",
+   "bg": "a plain purple studio wall with a small desk, no people, no objects in background, no text"
+  },
+  {
+   "text": "Les contrats à prix fixe ne bougent pas.",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "placing one paw on a closed folder, calm expression",
+   "bg": "a news desk with a closed folder, no people"
+  },
+  {
+   "text": "Regarde si ton offre est indexée.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "holding a small gas burner knob toward the camera",
+   "bg": "a kitchen counter with a gas stove, no people, no text"
+  },
+  {
+   "text": "Le prix dépend du marché de gros.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "speaking into the microphone, gesturing at a line chart",
+   "bg": "an outdoor street in autumn, no people, no text"
+  },
+  {
+   "text": "Les hausses arrivent sur la facture.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "holding an envelope toward the camera",
+   "bg": "a quiet hallway with a mail table, no people, no text"
+  },
+  {
+   "text": "Tu es en contrat à prix fixe ?",
+   "subject": "a realistic grey and white tuxedo kitten news presenter in a navy blazer with a small red bow tie, calm and friendly expression, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft purple backdrop, no people, no text, no flags"
+  }
+ ],
+ "voix_brute_gardee": true
+}

@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:02,522
+Attal écrit aux Français.
+
+2
+00:00:02,572 --> 00:00:05,189
+La France doit arrêter de vivre à crédit.
+
+3
+00:00:05,239 --> 00:00:07,023
+C'est sa lettre aux électeurs.
+
+4
+00:00:07,073 --> 00:00:08,959
+La dette revient dans le débat.
+
+5
+00:00:09,009 --> 00:00:10,861
+Notre reporter a lu la lettre.
+
+6
+00:00:10,911 --> 00:00:13,319
+Un chat, lui, vit à crédit.
+
+7
+00:00:13,369 --> 00:00:14,783
+Un chat a fait le calcul.
+
+8
+00:00:14,833 --> 00:00:17,206
+Ça concerne tous les contribuables.
+
+9
+00:00:17,256 --> 00:00:19,600
+Pour ou contre ? Mets un chat.
+

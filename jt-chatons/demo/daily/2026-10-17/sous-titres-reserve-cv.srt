@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:02,484
+Ta carte Vitale doit être mise à jour.
+
+2
+00:00:02,533 --> 00:00:03,674
+Au moins une fois par an.
+
+3
+00:00:03,724 --> 00:00:05,429
+Et à chaque changement de situation.
+
+4
+00:00:05,479 --> 00:00:08,340
+Déménagement, naissance, nouvelle activité.
+
+5
+00:00:08,390 --> 00:00:09,925
+Elle n'a pas de date de validité.
+
+6
+00:00:09,975 --> 00:00:11,229
+Elle sert à tes remboursements.
+
+7
+00:00:11,279 --> 00:00:13,813
+Ça se fait sur ameli.fr ou dans l'appli.
+
+8
+00:00:13,863 --> 00:00:15,643
+Choisis une date fixe pour y penser.
+
+9
+00:00:15,693 --> 00:00:16,621
+Un rappel suffit.
+
+10
+00:00:16,671 --> 00:00:18,337
+Tu l'as mise à jour cette année ?
+
