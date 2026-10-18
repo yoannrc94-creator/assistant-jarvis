@@ -1,0 +1,23 @@
+RÉSERVE DE VIDÉOS « JT des chatons »
+Objectif : au moins 6 vidéos prêtes (2 jours d'avance).
+Statut à mettre à jour à chaque fabrication.
+
+Date        Créneau   Sujet                                   Fichier                                  Statut
+----------  --------  --------------------------------------  ---------------------------------------  -------------------------
+2026-10-14  matin     Projet RN sur la contribution à l'UE    daily/2026-10-14/JT-...-matin-rn.mp4     ENVOYÉE (image fixe, zoom)
+2026-10-14  midi      -                                       -                                        ANNULÉE (pas de publication ce jour)
+2026-10-14  soir      -                                       -                                        ANNULÉE (pas de publication ce jour)
+2026-10-15  matin     -                                       -                                        ENVOYÉE (7 heures 30)
+2026-10-15  midi      -                                       -                                        ENVOYÉE (12 heures 30)
+2026-10-15  soir      Attal et la dette                       daily/2026-10-15/JT-chatons-2026-10-15-soir-jt.mp4  ENVOYÉE (18 heures 30)
+2026-10-16  matin     Transports samedi                       daily/2026-10-16/JT-chatons-2026-10-16-matin-jt.mp4  ENVOYÉE (7 heures 30)
+2026-10-16  midi      Retraites +1,4 % et pneus hiver         daily/2026-10-16/JT-chatons-2026-10-16-midi-jt.mp4  ENVOYÉE (12 heures 30)
+2026-10-16  soir      Bail de location                        daily/2026-10-16/JT-chatons-2026-10-16-soir-jt.mp4  ENVOYÉE (18 heures 30)
+
+2026-10-17  matin     Vacances de la Toussaint                daily/2026-10-17/JT-chatons-2026-10-17-matin-jt.mp4  ENVOYÉE (7 heures 30)
+2026-10-17  midi      Changement d'heure le 25 octobre        daily/2026-10-17/JT-chatons-2026-10-17-midi-jt.mp4  ENVOYÉE (12 heures 30)
+2026-10-17  soir      Trêve hivernale                         daily/2026-10-17/JT-chatons-2026-10-17-soir-jt.mp4  ENVOYÉE (18 heures 30)
+RÉSERVE     -         Le 114, urgence pour sourds (evergreen) daily/2026-10-17/JT-chatons-2026-10-17-reserve-114-jt.mp4  PRÊTE, non envoyée (20,5 s)
+
+Histoires : histoire 2 (49.3) non publiée le 16 octobre, en attente d'une nouvelle date donnée par l'utilisateur. Histoire 3 le dimanche 18 octobre à 21 heures 30.
+Quota voix Gemini gratuit : 10 requêtes par jour et par modèle. Le 17 octobre : 8 utilisées (4 voix, 4 phrases de fin). Réserve : 1 vidéo sur 6.

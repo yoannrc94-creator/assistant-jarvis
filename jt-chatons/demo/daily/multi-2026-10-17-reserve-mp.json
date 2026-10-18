@@ -1,0 +1,80 @@
+{
+ "date": "2026-10-17",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "sans_secours": true,
+ "reaction": "",
+ "question": "",
+ "couleur": "#e5b93c",
+ "source": "Service public, Le Dauphiné Libéré, Club Patrimoine",
+ "hook1": "MaPrimeRénov' : plus de gaz",
+ "hook2": "Depuis le 1er septembre 2026",
+ "fin_voix": "Abonne-toi pour le prochain JT !",
+ "fin_sous_titre": "Un JT des chatons chaque jour",
+ "description": "Depuis le 1er septembre 2026, MaPrimeRénov' ne finance plus une rénovation d'ampleur si un chauffage au gaz est conservé. Tu as un projet de travaux ? Un émoji suffit 👇\n#maprimerenov #travaux #energie #logement #actu",
+ "segments": [
+  {
+   "text": "Depuis le 1er septembre, MaPrimeRénov' exclut le gaz.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Pour une rénovation d'ampleur seulement.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a paper document on the desk with one paw",
+   "bg": "a news desk with a paper wall calendar"
+  },
+  {
+   "text": "Garder un chauffage au gaz bloque l'aide.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding a small house model toward the camera",
+   "bg": "a bright kitchen table with papers and a cup of tea"
+  },
+  {
+   "text": "Les pompes à chaleur restent éligibles.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking at a paper quote with a thoughtful expression",
+   "bg": "a quiet office with folders on shelves"
+  },
+  {
+   "text": "La réforme recentre l'aide sur les pompes à chaleur.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "tapping a calculator on the desk",
+   "bg": "a calm living room with a window and autumn light"
+  },
+  {
+   "text": "Vérifie avant de signer un devis.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a paper document on the desk with one paw",
+   "bg": "a close-up of a laptop screen on a desk"
+  },
+  {
+   "text": "Demande plusieurs devis.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding a small house model toward the camera",
+   "bg": "a quiet street with trees in autumn"
+  },
+  {
+   "text": "Les règles changent souvent.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking at a paper quote with a thoughtful expression",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Vérifie sur service-public.fr.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "tapping a calculator on the desk",
+   "bg": "a news desk with a paper wall calendar"
+  },
+  {
+   "text": "Tu as un projet de travaux ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a bright kitchen table with papers and a cup of tea"
+  }
+ ],
+ "slot": "reserve-mp"
+}

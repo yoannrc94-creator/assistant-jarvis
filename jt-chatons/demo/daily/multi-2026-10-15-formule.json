@@ -1,0 +1,77 @@
+{
+ "date": "2026-10-15",
+ "slot": "formule",
+ "party": "jt",
+ "source": "Le Monde, Le Dauphiné Libéré",
+ "clip_seconds": 4,
+ "hook1": "Votre argent part à Bruxelles ?",
+ "hook2": "Les députés ont tranché",
+ "reaction": "",
+ "question": "Et vous, vous êtes pour ou contre ? Mets un chat en commentaire.",
+ "description": "Les députés ont validé la contribution française au budget européen, contre l'avis de LFI et du RN 🇪🇺🐱 Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #budget #europe #presidentielle2027",
+ "segments": [
+  {
+   "text": "Votre argent part à Bruxelles ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a modern news studio with a blue backdrop and a small desk, no people, no text, no writing",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence, small nod",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Les députés ont tranché.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a wide grand parliament hall with green benches and tall windows, no people in focus, no text, no writing",
+   "action": "turning slightly toward a large screen, presenting with one paw, calm serious face",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "La contribution française au budget européen est validée.",
+   "subject": "a realistic white kitten deputy in a dark suit, ",
+   "bg": "a grand parliament hall with green benches, soft light, no text, no writing",
+   "action": "raising one paw to vote, looking around at the others with a frown",
+   "accessory": "a small blue ribbon"
+  },
+  {
+   "text": "Malgré l'opposition de LFI et du RN.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a grand stone parliament building facade with flags, sunny day, no text, no writing",
+   "action": "holding the microphone up toward the camera, walking forward with energy",
+   "accessory": "a beige press vest"
+  },
+  {
+   "text": "Notre reporter est à l'Assemblée.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a bright hallway of a parliament building with tall windows, no text, no writing",
+   "action": "turning to look at a wall of tall windows, then back to the camera with a nod",
+   "accessory": "a beige press vest"
+  },
+  {
+   "text": "Les croquettes, elles, restent en France.",
+   "subject": "a realistic white kitten deputy in a dark suit, ",
+   "bg": "a cozy kitchen with a wooden table and a bowl of kibble, warm light, no text, no writing",
+   "action": "sitting by the bowl, paws crossed, looking satisfied",
+   "accessory": "a small blue scarf"
+  },
+  {
+   "text": "Un chat a fait le calcul.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a sunny French café terrace with a small table, no people, no text, no writing",
+   "action": "shaking head slowly while stirring a small cup of milk",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Ce vote concerne tous les contribuables.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a stone square in Brussels with European flags fluttering, no text, no writing",
+   "action": "pointing with the microphone toward the flags, then looking at the camera",
+   "accessory": "a beige press vest"
+  },
+  {
+   "text": "Vous êtes pour ou contre ? Mets un chat.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing with both paws open, looking straight into the camera, eyebrows raised",
+   "accessory": "a tiny dark tie"
+  }
+ ]
+}

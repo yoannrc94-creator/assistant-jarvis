@@ -1,0 +1,24 @@
+{
+ "date": "2026-10-13",
+ "slot": "matin",
+ "party": "lr",
+ "video_minutes": 45,
+ "clip_seconds": 10,
+ "hooks_candidats": [
+  "197 milliards d'économies, qui paie ?",
+  "Moins de fonctionnaires, zéro impôt nouveau",
+  "Retailleau sort les ciseaux !",
+  "400 000 postes non remplacés d'ici 2032",
+  "Une France « quasiment en faillite », selon Retailleau",
+  "En 2031, moins de 3 % de déficit, promet-il"
+ ],
+ "hook1": "Retailleau sort les ciseaux !",
+ "hook2": "Bjorn a fait les comptes",
+ "text": "197 milliards d'économies ! Bruno Retailleau sort les ciseaux. Un : 400 000 fonctionnaires partis à la retraite ne seraient pas remplacés d'ici 2032. Deux : il promet zéro impôt nouveau.",
+ "reaction": "Bjorn, lui, économise déjà ses croquettes.",
+ "question": "Et toi, tu signes ce plan ? Dis-le en commentaire !",
+ "source": "LCP, Public Sénat, Le Parisien",
+ "bg": "a grand French ministry office with tall windows, a desk covered with towering stacks of budget folders and a giant pair of golden scissors, warm morning light, no text, no writing",
+ "accessory": "a tiny pair of golden scissors clipped to the side of its helmet",
+ "description": "197 milliards d'économies d'ici 2032 : le plan de Bruno Retailleau ✂️🐱 Le candidat LR veut ne pas remplacer 400 000 fonctionnaires partis à la retraite et promet aucun impôt nouveau. Tu signes ou pas ? 👇\n#actu #politique #retailleau #budget #fonctionnaires"
+}

@@ -1,0 +1,25 @@
+{
+ "party": "eelv",
+ "hooks_candidats": [
+  "Avant Parcoursup, ça marchait ?",
+  "Tondelier règle ses comptes avec Parcoursup",
+  "Parcoursup, une plateforme à jeter ?",
+  "Les Écologistes veulent abroger Parcoursup",
+  "Ton orientation sans Parcoursup ?",
+  "Parcoursup, c'était mieux avant ?"
+ ],
+ "hook1": "Avant Parcoursup, ça marchait ?",
+ "hook2": "Flocon a rempli son dossier",
+ "text": "Avant Parcoursup, ça marchait. Phrase signée Marine Tondelier. Un : elle critique la plateforme d'orientation des lycéens. Deux : une députée écologiste veut la supprimer.",
+ "reaction": "Flocon, lui, n'a jamais fini son dossier.",
+ "question": "Supprimer Parcoursup, tu es pour ? Mets un chat en commentaire. Contre ? Mets une croix.",
+ "source": "BFMTV, Orange Actualités",
+ "bg": "a sunny university campus courtyard with old stone buildings, green trees and parked bicycles, no people, no text, no writing",
+ "action": "rushing across the campus courtyard carrying a towering wobbling stack of paper application folders, a few sheets flying away in the wind",
+ "accessory": "a small green backpack and round glasses",
+ "description": "« Avant Parcoursup, ça marchait » : Marine Tondelier critique la plateforme d'orientation des lycéens 🎓🐱 Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #parcoursup #tondelier #ecologie",
+ "date": "2026-10-15",
+ "slot": "matin",
+ "video_minutes": 2,
+ "clip_seconds": 6
+}

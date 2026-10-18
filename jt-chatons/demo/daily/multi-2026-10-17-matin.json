@@ -1,0 +1,80 @@
+{
+ "date": "2026-10-17",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "slot": "matin",
+ "couleur": "#e5b93c",
+ "source": "Onisep, L'Étudiant",
+ "hook1": "Toussaint : 2 semaines de vacances",
+ "hook2": "Rentrée le lundi 2 novembre",
+ "fin_voix": "Abonne-toi, prochain JT à 12 heures 30 !",
+ "fin_sous_titre": "Prochain JT à 12h30",
+ "description": "Les vacances de la Toussaint commencent aujourd'hui pour toutes les zones, retour en classe le lundi 2 novembre. Tu pars en vacances ? Un émoji suffit 👇\n#vacances #toussaint #ecole #famille #actu",
+ "segments": [
+  {
+   "text": "Vacances de la Toussaint dès aujourd'hui.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Deux semaines sans école.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "closing a school bag and smiling, stepping away from a desk",
+   "bg": "an empty classroom with autumn leaves outside the window"
+  },
+  {
+   "text": "Mêmes dates pour toutes les zones.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing with one paw at a large screen showing a map of France",
+   "bg": "a modern news studio with a large screen showing a map of France"
+  },
+  {
+   "text": "Retour en classe le 2 novembre.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "tapping a paper calendar on the desk with one paw",
+   "bg": "a news desk with a paper wall calendar showing November"
+  },
+  {
+   "text": "La Corse aussi.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "speaking into the microphone near the sea, wind in the fur",
+   "bg": "a sunny Mediterranean harbour with boats"
+  },
+  {
+   "text": "Les Antilles ont leurs propres dates.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "holding the microphone and nodding, palm trees behind",
+   "bg": "a tropical beach with palm trees"
+  },
+  {
+   "text": "Le reporter a vérifié.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "holding the microphone and giving a thumbs up with the other paw",
+   "bg": "an empty school courtyard with autumn trees, deserted, no people, no signs"
+  },
+  {
+   "text": "Les enfants sont déjà prêts.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "pulling a small suitcase along the pavement, looking happy",
+   "bg": "an empty suburban street in autumn with a parked car, deserted, no people"
+  },
+  {
+   "text": "Profitez bien en famille.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "waving goodbye from a car window",
+   "bg": "a country road with autumn trees"
+  },
+  {
+   "text": "Tu pars en vacances ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft blue backdrop"
+  }
+ ],
+ "voix_brute_gardee": true
+}

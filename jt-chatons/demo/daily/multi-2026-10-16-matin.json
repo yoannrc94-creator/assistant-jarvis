@@ -1,0 +1,96 @@
+{
+ "date": "2026-10-16",
+ "slot": "matin",
+ "party": "jt",
+ "source": "Le Parisien, CNEWS",
+ "clip_seconds": 4,
+ "hook1": "Grève samedi : les trains roulent ?",
+ "hook2": "Rien d'annoncé pour l'instant",
+ "reaction": "",
+ "question": "",
+ "description": "Mobilisation prévue samedi, aucune grève nationale confirmée. Tu prends les transports samedi ? Un émoji suffit 👇\n#transports #actu #greve #vieapratique #france",
+ "segments": [
+  {
+   "text": "Mobilisation prévue samedi.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright Paris metro station platform with a clean modern train, no people, no text, no writing",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence, small nod",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Des gilets jaunes veulent se retrouver.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "an empty Paris boulevard in soft morning light with a bench, no people, no text, no writing",
+   "action": "holding a microphone toward the bench, calm serious face"
+  },
+  {
+   "text": "Les transports, touchés ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright modern train station hall with empty benches, no people, no text, no writing",
+   "action": "turning toward the station hall, raising one paw, questioning expression",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "La SNCF n'a pas d'information.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a railway platform with a red train at sunrise, no people, no text, no writing",
+   "action": "holding a phone, shrugging with a puzzled look",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "La RATP ne peut rien prévoir.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a Paris metro station entrance with green lamps, no people, no text, no writing",
+   "action": "looking at a wall clock, paw on the chin, thinking"
+  },
+  {
+   "text": "Aucune grève nationale confirmée.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a wooden desk with a closed folder and a pen, no people, no text, no writing",
+   "action": "tapping the folder with one paw, serious look",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Les avions devraient décoller.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "an airport terminal window with a plane taking off in the distance, no people, no text, no writing",
+   "action": "watching the plane through the window, tail swishing, content look"
+  },
+  {
+   "text": "Les tendances arrivent la veille.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a Paris café terrace at dusk with warm lights, no people, no text, no writing",
+   "action": "checking a small watch, small smile",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Vérifie tes horaires.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a bright modern train station hall with empty benches, no people, no text, no writing",
+   "action": "pointing at the camera with one paw, friendly look"
+  },
+  {
+   "text": "Le train ? Mets un chat.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing with both paws open, looking straight into the camera, eyebrows raised",
+   "accessory": "a tiny dark tie"
+  }
+ ],
+ "fin_voix": "C'était le JT des Chatons, abonne-toi pour l'épisode de demain !",
+ "fin_cache": "gem_signature.wav",
+ "voix_existante": "/tmp/claude-0/-home-user-assistant-jarvis/45b2ce9a-ba2b-5f9f-98c9-bdcc4dc5d6fd/scratchpad/demo/tk_google-16-matin.wav",
+ "debuts": [
+  0.0,
+  1.9875,
+  4.251,
+  5.9615,
+  8.0685,
+  10.5695,
+  12.5495,
+  14.4515,
+  16.3815,
+  17.6545
+ ],
+ "couleur": "#e5b93c"
+}

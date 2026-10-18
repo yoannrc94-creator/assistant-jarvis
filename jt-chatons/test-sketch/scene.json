@@ -1,0 +1,42 @@
+{
+ "titre": "Trois heures à la mairie",
+ "mention": "Histoire fictive, inspirée de la vie réelle. Les personnages ne sont pas réels.",
+ "durée_visée_s": 20,
+ "personnages": {
+  "gaspard": "a realistic black kitten in a grey wool jumper, round glasses, sitting on a plastic chair in a town hall waiting room",
+  "lola": "a realistic white kitten with blue eyes, wearing a small red scarf, sitting on the next plastic chair"
+ },
+ "plans": [
+  {
+   "qui": "gaspard",
+   "texte": "J'attends depuis trois heures.",
+   "action": "talking to the camera, mouth open, annoyed expression, paws on knees"
+  },
+  {
+   "qui": "lola",
+   "texte": "On m'a dit de revenir demain.",
+   "action": "talking to the camera, mouth open, tilting head, resigned expression"
+  },
+  {
+   "qui": "gaspard",
+   "texte": "Tu as pris un numéro ?",
+   "action": "talking, turning slightly toward the other chair, eyebrows raised"
+  },
+  {
+   "qui": "lola",
+   "texte": "Le quarante-deux. Le tien, le quarante-trois.",
+   "action": "talking, holding a small paper ticket up to the camera"
+  },
+  {
+   "qui": "gaspard",
+   "texte": "Donc on attend encore.",
+   "action": "talking, sighing, leaning back in the chair"
+  },
+  {
+   "qui": "lola",
+   "texte": "Fais-moi signe quand on t'appelle.",
+   "action": "talking, smiling, waving one paw"
+  }
+ ],
+ "fin": "Plan large des deux chatons sur les chaises, bruit de salle d'attente, carte : Histoire fictive."
+}

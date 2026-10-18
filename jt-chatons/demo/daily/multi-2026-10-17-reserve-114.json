@@ -1,0 +1,79 @@
+{
+ "date": "2026-10-17",
+ "slot": "reserve-114",
+ "party": "jt",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "couleur": "#e5b93c",
+ "source": "Gendarmerie nationale, Santé.fr",
+ "hook1": "Le 114, urgence par SMS",
+ "hook2": "Pour les sourds et malentendants",
+ "fin_voix": "Abonne-toi pour le prochain JT !",
+ "fin_sous_titre": "Un JT des chatons chaque jour",
+ "description": "Le 114 est le numéro d'urgence gratuit des personnes sourdes et malentendantes, jour et nuit, par SMS, tchat ou visio. Tu le connaissais ? Un émoji suffit 👇\n#114 #urgence #accessibilite #sourds #info",
+ "segments": [
+  {
+   "text": "Le 114 sert aux personnes sourdes.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "C'est un numéro d'urgence gratuit.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding up a smartphone toward the camera with one paw",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Il marche jour et nuit.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "looking at a glowing smartphone in a dark room, calm",
+   "bg": "a calm bedroom at night with a lamp, no people"
+  },
+  {
+   "text": "Par SMS, tchat ou visio.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "typing a message on a smartphone with both paws",
+   "bg": "a cozy living room, no people, no text"
+  },
+  {
+   "text": "Pour les malentendants aussi.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "touching one ear gently with a paw, kind expression",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Des agents préviennent les secours.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "speaking into the microphone in front of a fire station",
+   "bg": "the front of a red fire station, deserted, no people"
+  },
+  {
+   "text": "Samu, pompiers ou gendarmes.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "pointing at a parked ambulance behind",
+   "bg": "a quiet street with a parked ambulance, no people"
+  },
+  {
+   "text": "Partage-le à un proche concerné.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "action": "handing a smartphone to another kitten with a smile",
+   "bg": "a bright kitchen, no people"
+  },
+  {
+   "text": "Le reporter a vérifié.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "action": "reading a sheet of paper, then nodding",
+   "bg": "a quiet office with folders on shelves, no people"
+  },
+  {
+   "text": "Tu le connaissais ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft blue backdrop"
+  }
+ ]
+}

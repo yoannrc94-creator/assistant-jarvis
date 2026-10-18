@@ -1,0 +1,7 @@
+À 2 heures 35 (14 octobre), histoire 2 : les décors et les tenues ont changé dans story/ep2.py (ancien fichier : story/ep2.bak.py).
+Les 9 scènes animées existantes (clips/story_e2s*.mp4) utilisent l'ancien décor : il faut régénérer les images puis les animations.
+Ordre : 1) quota Gemini réinitialisé, 2) images avec le nouveau texte de chaque scène (Agnes, une à la fois, à 1 requête par minute), 3) animation (Agnes, sinon Hugging Face), 4) make_story.py ep2.
+Le CTA de la scène 9 est déjà à un émoji. La description et le commentaire épinglé de l'histoire 2 restent à écrire.
+Histoire 3 (ep3.py) : pas encore changée.
+
+Test style « action réaliste » (demandé le 14 octobre) : animer img/test_action_gaspard.png dès que le quota Hugging Face revient (vers 2 heures 40), prompt : le chaton pédale vers la caméra, la charrette rebondit, les drapeaux flottent, caméra qui recule, flou de mouvement. Envoyer le résultat à l'utilisateur, légende « Test du style action, à ne pas publier ».

@@ -1,0 +1,25 @@
+{
+ "party": "ren",
+ "hooks_candidats": [
+  "Stop à la vie à crédit ?",
+  "Attal écrit aux Français",
+  "La dette, ton problème aussi ?",
+  "Attal tire la sonnette d'alarme",
+  "Une lettre contre la dette",
+  "Vivre à crédit, c'est fini ?"
+ ],
+ "hook1": "Attal : stop à la vie à crédit",
+ "hook2": "Mandarine a posté la lettre",
+ "text": "La France doit arrêter de vivre à crédit. C'est la lettre de Gabriel Attal aux Français. Un : il écrit directement aux électeurs. Deux : il veut alerter sur la dette.",
+ "reaction": "Mandarine, elle, vit à crédit de croquettes.",
+ "question": "Tu es pour ? Mets un chat en commentaire. Contre ? Mets une croix.",
+ "source": "Les Echos",
+ "bg": "a sunny French village street with a yellow mailbox on an old stone wall and flower pots, no people, no text, no writing",
+ "action": "running toward a yellow mailbox and standing on tiptoes, struggling to push a giant envelope through the slot",
+ "accessory": "an orange messenger bag",
+ "description": "« La France doit arrêter de vivre à crédit » : la lettre de Gabriel Attal aux Français ✉️🐱 Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#actu #politique #dette #attal #presidentielle2027",
+ "date": "2026-10-15",
+ "slot": "soir",
+ "video_minutes": 2,
+ "clip_seconds": 6
+}

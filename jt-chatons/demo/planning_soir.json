@@ -1,0 +1,28 @@
+{
+ "2026-10-11": {
+  "parti": "RN",
+  "video": "package_soir/1-RN-dimanche-11.mp4",
+  "description": "descriptions/1-RN-dimanche-11.txt"
+ },
+ "2026-10-12": {
+  "parti": "Renaissance",
+  "video": "package_soir/2-Renaissance-lundi-12.mp4",
+  "description": "descriptions/2-Renaissance-lundi-12.txt"
+ },
+ "2026-10-13": {
+  "parti": "Les Écologistes",
+  "video": "package_soir/3-Ecologistes-mardi-13.mp4",
+  "description": "descriptions/3-Ecologistes-mardi-13.txt"
+ },
+ "2026-10-14": {
+  "parti": "LR",
+  "video": "package_soir/4-LR-mercredi-14.mp4",
+  "description": "descriptions/4-LR-mercredi-14.txt"
+ },
+ "2026-10-15": {
+  "parti": "LFI",
+  "video": "package_soir/5-LFI-jeudi-15.mp4",
+  "description": "descriptions/5-LFI-jeudi-15.txt"
+ },
+ "note": "Depuis le 12 octobre (choix de l'utilisateur) : plus de parti imposé, le sujet le plus chaud décide. Ce fichier n'est plus utilisé."
+}

@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-18",
+ "slot": "astuce",
+ "party": "jt",
+ "source": "Astuce du quotidien, aucun chiffre",
+ "couleur": "#e5b93c",
+ "clip_seconds": 4,
+ "format_v2": true,
+ "voix_google": true,
+ "reaction": "",
+ "question": "",
+ "hook1": "Prépare tes affaires la veille",
+ "hook2": "Clés, badge, téléphone",
+ "fin_voix": "Abonne-toi pour le prochain JT !",
+ "fin_sous_titre": "Un JT des chatons chaque jour",
+ "description": "Chercher ses clés le matin, ça se prépare la veille. Tu prépares tes affaires la veille ? Un émoji suffit 👇\n#astuce #quotidien #organisation #viepratique #conseil",
+ "segments": [
+  {
+   "text": "Prépare tes affaires la veille.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Clés, badge et téléphone sur la table.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at a small wooden table with one paw",
+   "bg": "a bright hallway with a wooden table, no people, no text"
+  },
+  {
+   "text": "Ce matin, Gaspard cherche ses clés.",
+   "subject": "a realistic grey kitten in a navy jumper, round glasses, looking worried, ",
+   "action": "searching frantically, looking under a cushion",
+   "bg": "a bright hallway with a wooden coat rack and a small table, no people, no text"
+  },
+  {
+   "text": "Il retourne le manteau et le sac.",
+   "subject": "a realistic grey kitten in a navy jumper, round glasses, looking worried, ",
+   "action": "turning a coat pocket inside out, looking distressed",
+   "bg": "a bright hallway with a wooden coat rack and a small table, no people, no text"
+  },
+  {
+   "text": "Résultat, il est en retard.",
+   "subject": "a realistic grey kitten in a navy jumper, round glasses, looking worried, ",
+   "action": "checking a wristwatch with a worried face",
+   "bg": "a bright hallway with a wooden coat rack and a small table, no people, no text"
+  },
+  {
+   "text": "La veille, il suffisait de tout poser.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "placing a set of keys on a small tray with one paw",
+   "bg": "a bright hallway with a small tray by the door, no people"
+  },
+  {
+   "text": "Un panier près de la porte suffit.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "pointing at an empty wicker basket by the door",
+   "bg": "a bright hallway with a wicker basket by the door, no people"
+  },
+  {
+   "text": "Une seule habitude, chaque soir.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "holding up one paw with a single finger raised",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Tu prépares tes affaires la veille ?",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "action": "standing with both paws open, looking straight into the camera",
+   "bg": "a modern news studio with a soft blue backdrop"
+  }
+ ]
+}

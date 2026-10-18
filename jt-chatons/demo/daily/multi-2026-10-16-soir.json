@@ -1,0 +1,94 @@
+{
+ "date": "2026-10-16",
+ "slot": "soir",
+ "party": "jt",
+ "source": "service-public.gouv.fr, MeilleursAgents",
+ "clip_seconds": 4,
+ "hook1": "Bail de location : ce qui change",
+ "hook2": "Depuis le 1er octobre 2026",
+ "reaction": "",
+ "question": "",
+ "description": "Bail de location : ce qui change depuis le 1er octobre. Pour 🐱 ou contre ❌ ? Un émoji suffit 👇\n#logement #bail #locataires #actu #vieapratique",
+ "segments": [
+  {
+   "text": "Les baux de location changent.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright modern living room with a wooden table, no people, no text, no writing",
+   "action": "looking straight into the camera, one eyebrow raised, mouth open mid-sentence, small nod",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "De nouveaux contrats s'appliquent.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a bright office desk with a neat folder, no people, no text, no writing",
+   "action": "holding a microphone, calm serious face"
+  },
+  {
+   "text": "Ils concernent les résidences principales.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright home interior with a window and plants, no people, no text, no writing",
+   "action": "pointing at the window, explaining with a calm gesture",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Un champ pour le portable.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a bright kitchen table with a phone lying on it, no people, no text, no writing",
+   "action": "tapping the phone with one paw, curious look"
+  },
+  {
+   "text": "Il est ajouté au contrat type.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a bright kitchen table with a folded contract, no people, no text, no writing",
+   "action": "placing one paw on a folded contract, calm look"
+  },
+  {
+   "text": "Bailleurs et locataires sont concernés.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a bright living room with two armchairs, no people, no text, no writing",
+   "action": "looking from one armchair to the other, nodding"
+  },
+  {
+   "text": "Relisez avant de signer.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a bright office desk with a pen and a folded contract, no people, no text, no writing",
+   "action": "holding a pen toward the camera, serious look",
+   "accessory": "a tiny dark tie"
+  },
+  {
+   "text": "Lisez-le en entier.",
+   "subject": "a realistic white kitten in a dark suit, ",
+   "bg": "a bright office desk with a folded contract, no people, no text, no writing",
+   "action": "flipping a page with one paw, focused look"
+  },
+  {
+   "text": "Le reporter a lu le modèle.",
+   "subject": "a realistic grey kitten field reporter wearing an orange helmet and a beige press vest, holding a microphone, ",
+   "bg": "a bright kitchen with a window and a plant, no people, no text, no writing",
+   "action": "reading a folded document with round glasses, nodding slowly"
+  },
+  {
+   "text": "Locataire ? Mets un chat.",
+   "subject": "a realistic ginger tabby kitten news presenter in a small dark suit and tie, serious expression with an ironic look, ",
+   "bg": "a stage with a warm spotlight and a red velvet curtain, no people, no text, no writing",
+   "action": "standing with both paws open, looking straight into the camera, eyebrows raised",
+   "accessory": "a tiny dark tie"
+  }
+ ],
+ "fin_voix": "C'était le JT des Chatons, abonne-toi pour l'épisode de demain !",
+ "fin_cache": "gem_signature.wav",
+ "voix_existante": "/tmp/claude-0/-home-user-assistant-jarvis/45b2ce9a-ba2b-5f9f-98c9-bdcc4dc5d6fd/scratchpad/demo/tk_final-16-soir.wav",
+ "debuts": [
+  0.0,
+  2.289,
+  4.327,
+  6.718,
+  8.495,
+  10.195,
+  12.687,
+  14.332,
+  15.959,
+  18.002
+ ],
+ "couleur": "#7b5ea7"
+}

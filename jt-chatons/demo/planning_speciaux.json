@@ -1,0 +1,34 @@
+{
+ "note": "Vidéos spéciales déjà prévues : remplacent la vidéo automatique de ce créneau. Script à relancer la nuit (actu vérifiée, voix Gemini), puis envoi. Depuis le 13 octobre : créneaux matin 7 heures 30, midi 12 heures 30, soir 18 heures 30, bonus 20 heures 30.",
+ "2026-10-12": {
+  "apm": {
+   "script": "make_lycees.py",
+   "video": "bonus/Bonus-lycees-edition-speciale.mp4",
+   "description": "bonus/description-lycees.txt",
+   "titre": "édition spéciale lycées"
+  },
+  "bonus": {
+   "script": "make_covid.py",
+   "video": "bonus/Bonus-covid-edition-speciale.mp4",
+   "description": "bonus/description-covid.txt",
+   "titre": "édition spéciale Covid",
+   "heure": "20 heures 30"
+  }
+ },
+ "2026-10-13": {
+  "midi": {
+   "script": "make_debat.py",
+   "video": "bonus/Bonus-debat-reseaux-sociaux.mp4",
+   "description": "bonus/description-debat.txt",
+   "titre": "débat réseaux sociaux avant 15 ans"
+  }
+ },
+ "2026-10-14": {
+  "midi": {
+   "script": "make_essence.py",
+   "video": "bonus/Bonus-edition-speciale-essence.mp4",
+   "description": "bonus/description-essence.txt",
+   "titre": "édition spéciale essence avec les 6 reporters"
+  }
+ }
+}

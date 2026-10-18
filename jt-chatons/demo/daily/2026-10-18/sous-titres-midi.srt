@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:02,280
+L'aide carburant de 100 euros est élargie.
+
+2
+00:00:02,330 --> 00:00:03,888
+Elle concerne les grands rouleurs.
+
+3
+00:00:03,938 --> 00:00:06,020
+Elle est prolongée jusqu'à la fin de l'année.
+
+4
+00:00:06,070 --> 00:00:09,367
+Les nouveaux bénéficiaires doivent faire une demande.
+
+5
+00:00:09,417 --> 00:00:11,123
+La demande se fait sur impots.gouv.fr.
+
+6
+00:00:11,173 --> 00:00:13,980
+Vérifie ton éligibilité avant de demander.
+
+7
+00:00:14,030 --> 00:00:16,348
+Méfie-toi des sites intermédiaires.
+
+8
+00:00:16,398 --> 00:00:18,628
+Seul impots.gouv.fr est officiel.
+
+9
+00:00:18,678 --> 00:00:20,150
+Tu en as déjà profité ?
+

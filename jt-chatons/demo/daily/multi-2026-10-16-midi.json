@@ -1,0 +1,91 @@
+{
+ "date": "2026-10-16",
+ "slot": "midi",
+ "party": "jt",
+ "source": "Agirc-Arrco, Ouest-France, Service public",
+ "clip_seconds": 4,
+ "hook1": "Retraites : +1,4 % dès novembre",
+ "hook2": "Et les pneus hiver aussi",
+ "reaction": "",
+ "question": "",
+ "fin": true,
+ "couleur": "#2a9d8f",
+ "fin_voix": "C'était le JT des Chatons, abonne-toi pour l'épisode de demain !",
+ "fin_cache": "gem_signature.wav",
+ "segments": [
+  {
+   "text": "Deux changements au 1er novembre.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "looking straight into the camera, raising two paws, a serious and friendly expression",
+   "bg": "a modern news studio with a soft blue backdrop"
+  },
+  {
+   "text": "Retraites complémentaires : plus 1,4 %.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "holding a printed page toward the camera with one paw and pointing at it with the other",
+   "bg": "a bright wooden kitchen table with a cup of tea and an envelope"
+  },
+  {
+   "text": "Pneus hiver : deuxième changement.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "turning toward a large screen showing a snowy mountain road, presenting with one paw",
+   "bg": "a modern news studio with a large screen showing a snowy road"
+  },
+  {
+   "text": "Obligatoires dans certaines communes.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "standing next to a parked car, tapping its tire with one paw",
+   "bg": "a snowy village street with parked cars"
+  },
+  {
+   "text": "Du 1er novembre au 31 mars.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "tapping a wall calendar with one paw, looking at the camera",
+   "bg": "a bright office with a wall calendar"
+  },
+  {
+   "text": "Dans 34 départements de montagne.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "pointing at a large map of France on the wall with one paw",
+   "bg": "a bright room with a large map of France on the wall"
+  },
+  {
+   "text": "Notamment les Alpes.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "looking at snowy Alpine peaks, paws resting on a wooden railing",
+   "bg": "a wooden balcony facing snowy Alpine peaks at sunrise"
+  },
+  {
+   "text": "Et les Pyrénées.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "turning its head toward distant snowy mountain peaks, ears up",
+   "bg": "a mountain viewpoint with snowy Pyrenees peaks in the distance"
+  },
+  {
+   "text": "Vérifie si ta commune est concernée.",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "holding a smartphone toward the camera, scrolling with one paw",
+   "bg": "a cozy living room with a sofa and warm lamp light"
+  },
+  {
+   "text": "Tu le savais ?",
+   "subject": "a realistic black kitten news presenter with white paws, small round reading glasses and a dark green wool sweater, ",
+   "action": "raising one eyebrow, looking at the camera with a mischievous smile, one paw raised",
+   "bg": "a warm studio backdrop with a soft spotlight"
+  }
+ ],
+ "debuts": [
+  0.0,
+  2.28,
+  5.706,
+  7.774,
+  10.091,
+  12.464,
+  14.663,
+  15.768,
+  16.653,
+  19.313
+ ],
+ "voix_existante": "/tmp/claude-0/-home-user-assistant-jarvis/45b2ce9a-ba2b-5f9f-98c9-bdcc4dc5d6fd/scratchpad/demo/tk_final-16-midi.wav",
+ "description": "Au 1er novembre : retraites complémentaires du privé +1,4 %, et pneus hiver obligatoires dans certaines communes. Tu le savais ? Un émoji suffit 👇\n#retraite #pneushiver #actu #argent #vieapratique"
+}

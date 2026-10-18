@@ -1,0 +1,34 @@
+{
+ "date": "2026-10-11",
+ "party": "ps",
+ "video_minutes": 100,
+ "clip_seconds": 10,
+ "hook1": "Primaire PS, plus de 100 000 votants !",
+ "hook2": "Pivoine a tout compté",
+ "text": "Primaire à gauche : plus de cent mille votants ! Un : selon la commission d'organisation, plus de cent mille personnes avaient voté samedi à 22 heures, rapporte Le Monde. Deux : après une cyberattaque contre le site, le vote a été prolongé, selon BFM. Le parquet de Paris a ouvert une enquête. Trois : les résultats sont attendus ce dimanche, selon les DNA.",
+ "reaction": "Et moi, j'ai recompté trois fois avec mon boulier.",
+ "question": "Et toi, tu penses que cette primaire va rassembler la gauche ? Oui ou non ?",
+ "source": "Le Monde, BFM, DNA",
+ "bg": "a cozy small-town voting room with a transparent ballot box on a wooden table, voting booths with red curtains, warm evening lamps, no text, no flags",
+ "accessory": "a tiny wooden abacus with colorful beads held under its other arm, and small round reading glasses",
+ "description": "Primaire PS : plus de 100 000 votants, résultats ce dimanche 🐱🎤 Vote prolongé après une cyberattaque et enquête du parquet de Paris : Pivoine la persane a tout compté. Cette primaire va rassembler la gauche ? Oui ou non ? 👇\n#actu #politique #primaire #info #chat",
+ "clip": "daily_2026-10-11_ps",
+ "episode": 2,
+ "illus": [
+  [
+   "Un",
+   "test_vote",
+   "100 000 VOTANTS"
+  ],
+  [
+   "Deux",
+   "test_cyber",
+   "VOTE PROLONGÉ"
+  ],
+  [
+   "Trois",
+   "test_results",
+   "RÉSULTATS CE DIMANCHE"
+  ]
+ ]
+}
