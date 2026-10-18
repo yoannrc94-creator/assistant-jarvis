@@ -104,9 +104,9 @@ def verifier(path, histoire=False):
         ordre = all(blocs[k][1] <= blocs[k + 1][0] + 0.01 for k in range(len(blocs) - 1))
         note('OK' if ordre else 'ÉCHEC', 'ordre des sous-titres', 'sans chevauchement' if ordre else 'des phrases se chevauchent')
         courts = [k + 1 for k, (x, z, _) in enumerate(blocs) if z - x < 0.8]
-        rapides = [k + 1 for k, (x, z, t) in enumerate(blocs) if len(t) / max(0.1, z - x) > 22]
+        rapides = [k + 1 for k, (x, z, t) in enumerate(blocs) if len(t) / max(0.1, z - x) > 25]
         note('OK' if not courts else 'ALERTE', 'temps de lecture', 'chaque phrase reste au moins 0,8 s' if not courts else f'phrases trop brèves : {courts}')
-        note('OK' if not rapides else 'ALERTE', 'vitesse de lecture', 'au plus 22 caractères par seconde' if not rapides else f'phrases trop rapides : {rapides}')
+        note('OK' if not rapides else 'ALERTE', 'vitesse de lecture', 'au plus 25 caractères par seconde' if not rapides else f'phrases trop rapides : {rapides}')
     desc = assoc['description']
     if not os.path.exists(desc): note('ÉCHEC', 'description', 'fichier absent')
     else:

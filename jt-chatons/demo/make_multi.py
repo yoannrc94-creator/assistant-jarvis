@@ -223,6 +223,15 @@ def main(cfg_path):
         for k, sg in enumerate(segs):
             if re.search(r'[:;?!]\s*[^\s?!.…»"”)]', sg['text'].strip()):
                 raise SystemExit(f"plan {k + 1} refusé : ponctuation au milieu de la phrase, la voix y ferait une pause : {sg['text']}")
+    # Plans à refaire (« remplacer » : liste des numéros, à partir de 0) : l'ancienne image et l'ancien clip sont rangés dans archives/, jamais supprimés
+    for k in cfg.get('remplacer', []):
+        nom_plan = f"multi_{day}_{slot}_{cfg['party']}_s{k}"
+        for dossier, ext in (('img', '.png'), ('clips', '.mp4')):
+            src_f = os.path.join(D, dossier, nom_plan + ext)
+            if os.path.exists(src_f):
+                os.makedirs(os.path.join(D, 'archives'), exist_ok=True)
+                dst_f = os.path.join(D, 'archives', f"{nom_plan}-{time.strftime('%Y%m%d-%H%M%S')}{ext}")
+                os.rename(src_f, dst_f); log('archivé', dst_f)
     # 1. Images et animations, un segment après l'autre
     names, clips = [], []
     for k, seg in enumerate(segs):
